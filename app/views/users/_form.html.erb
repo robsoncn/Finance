@@ -1,0 +1,28 @@
+<%= form_for(@user, :html => { :multipart => true }) do |f| %>
+
+	<% if @user.errors.any? %>
+
+		<%= pluralize(@user.errors.count, "error") %> prohibited this noticia from being saved:
+
+		<% @user.errors.full_messages.each do |msg| %>
+		<%= msg %>
+		<% end %>
+
+	 <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
