@@ -9,10 +9,21 @@
   </head>
   <body>
     <div id="container">
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
-      <%= content_tag :h1, yield(:title) if show_title? %>
+      <% if flash[:notice] -%>
+          <div class="notice">
+            <%= flash[:notice] %>
+          </div>
+      <% end -%>
+      
+      <% if flash[:error] -%>
+          <div class="error">
+            <%= flash[:error] %>
+          </div>
+      <% end -%>
+      <% if logged_in? -%>
+        <%= link_to 'Perfil', profile_path %> | 
+        <%= link_to 'Sair', logout_path %>
+      <% end -%>
       <%= yield %>
     </div>
   </body>

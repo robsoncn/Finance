@@ -13,7 +13,7 @@ checked program was:
 /* end */
 
 "gcc -o conftest -I. -I/usr/lib/ruby/1.8/x86_64-linux -I.    -fno-strict-aliasing -g -g -O2  -fPIC   conftest.c  -L. -L/usr/lib -L. -Wl,-Bsymbolic-functions -rdynamic -Wl,-export-dynamic     -lruby1.8-static  -lpthread -lrt -ldl -lcrypt -lm   -lc"
-/tmp/ccd33Nou.o: In function `t':
+/tmp/ccwP1fzl.o: In function `t':
 /home/wilbert/apps/Finance/RAILS_ENV=test/ruby/1.8/gems/mysql2-0.2.6/ext/mysql2/conftest.c:3: undefined reference to `rb_thread_blocking_region'
 collect2: ld returned 1 exit status
 checked program was:

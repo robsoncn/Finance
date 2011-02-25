@@ -1,12 +1,12 @@
 Finance::Application.routes.draw do
 	
+  resources :sessions
+
 	match "profile", :to => "users#show", :as => "profile"
+	match "logout", :to => "sessions#destroy", :as => "logout"
+	match "login", :to => "sessions#new", :as => "login"
 	
 	resources :users
-	
-	
-	
-	
 	
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -57,7 +57,7 @@ Finance::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => "users#index"
+   root :to => "users#new"
 
   # See how all your routes lay out with "rake routes"
 
