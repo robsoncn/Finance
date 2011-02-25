@@ -13,6 +13,7 @@ gem 'cucumber'
 gem 'rspec-rails'
 gem 'spork'
 gem 'launchy'
+gem 'ruby-debug'
 
 # Use unicorn as the web server
 # gem 'unicorn'
