@@ -2,15 +2,15 @@ class UsersController < ApplicationController
 
 
 def index
-  @users = User.all
+  @user = User.all
   respond_to do |format|
     format.html # index.html.erb
-    format.xml  { render :xml => @users }
+    format.xml  { render :xml => @user }
   end
 end
 
 def new
-  @user= User.new
+  @user = User.new
   respond_to do |format|
     format.html # new.html.erb
     format.xml  { render :xml => @user}
@@ -27,7 +27,7 @@ def show
 
   respond_to do |format|
     format.html # show.html.erb
-    format.xml  { render :xml => @users }
+    format.xml  { render :xml => @user }
   end
 end
 
@@ -46,12 +46,12 @@ def create
   end
 
 def update
-  @users = Users.find(params[:id])
+  @user = User.find(params[:id])
 
   respond_to do |format|
-    if @post.update_attributes(params[:users])
+    if @user.update_attributes(params[:user])
       flash[:notice] = 'User was successfully updated.'
-      format.html { redirect_to(@users) }
+      format.html { redirect_to(@user) }
       format.xml  { head :ok }
     else
       format.html { render :action => "edit" }
@@ -73,3 +73,4 @@ end
 
 
 end
+
