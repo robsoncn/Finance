@@ -13,7 +13,8 @@ module NavigationHelpers
     when /the new users page/
       new_users_path
 
-
+	when /the user page/
+	  profile_path
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
