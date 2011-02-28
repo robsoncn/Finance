@@ -4,7 +4,7 @@ SHELL = /bin/sh
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /usr/lib/ruby/1.8/x86_64-linux
+topdir = /usr/lib/ruby/1.8/i686-linux
 hdrdir = $(topdir)
 VPATH = $(srcdir):$(topdir):$(hdrdir)
 exec_prefix = $(prefix)
@@ -45,9 +45,9 @@ LIBRUBYARG_STATIC = -l$(RUBY_SO_NAME)-static
 
 RUBY_EXTCONF_H = 
 CFLAGS   =  -fPIC -fno-strict-aliasing -g -g -O2  -fPIC $(cflags) -Wall -funroll-loops 
-INCFLAGS = -I. -I. -I/usr/lib/ruby/1.8/x86_64-linux -I.
-DEFS     = 
-CPPFLAGS = -DHAVE_MYSQL_H -DHAVE_ERRMSG_H -DHAVE_MYSQLD_ERROR_H    -I/usr/include/mysql  -DBIG_JOINS=1  -fno-strict-aliasing   -DUNIV_LINUX -DUNIV_LINUX
+INCFLAGS = -I. -I. -I/usr/lib/ruby/1.8/i686-linux -I.
+DEFS     = -D_FILE_OFFSET_BITS=64
+CPPFLAGS = -DHAVE_MYSQL_H -DHAVE_ERRMSG_H -DHAVE_MYSQLD_ERROR_H  -D_FILE_OFFSET_BITS=64  -I/usr/include/mysql  -DBIG_JOINS=1  -fno-strict-aliasing   -DUNIV_LINUX -DUNIV_LINUX
 CXXFLAGS = $(CFLAGS) 
 ldflags  = -L. -Wl,-Bsymbolic-functions -rdynamic -Wl,-export-dynamic
 dldflags = 
@@ -59,8 +59,8 @@ EXEEXT =
 
 RUBY_INSTALL_NAME = ruby1.8
 RUBY_SO_NAME = ruby1.8
-arch = x86_64-linux
-sitearch = x86_64-linux
+arch = i686-linux
+sitearch = i686-linux
 ruby_version = 1.8
 ruby = /usr/bin/ruby1.8
 RUBY = $(ruby)
@@ -87,8 +87,8 @@ extout_prefix =
 target_prefix = /mysql2
 LOCAL_LIBS = 
 LIBS = $(LIBRUBYARG_SHARED) -Wl,-Bsymbolic-functions -rdynamic -L/usr/lib/mysql -lmysqlclient  -lpthread -lrt -ldl -lcrypt -lm   -lc
-SRCS = mysql2_ext.c result.c client.c
-OBJS = mysql2_ext.o result.o client.o
+SRCS = mysql2_ext.c client.c result.c
+OBJS = mysql2_ext.o client.o result.o
 TARGET = mysql2
 DLLIB = $(TARGET).so
 EXTSTATIC = 
@@ -96,8 +96,8 @@ STATIC_LIB =
 
 BINDIR        = $(bindir)
 RUBYCOMMONDIR = $(sitedir)$(target_prefix)
-RUBYLIBDIR = /home/wilbert/apps/Finance/RAILS_ENV=test/ruby/1.8/gems/mysql2-0.2.6/lib$(target_prefix)
-RUBYARCHDIR = /home/wilbert/apps/Finance/RAILS_ENV=test/ruby/1.8/gems/mysql2-0.2.6/lib$(target_prefix)
+RUBYLIBDIR = /home/robson/workspace/finance/RAILS_ENV=test/ruby/1.8/gems/mysql2-0.2.6/lib$(target_prefix)
+RUBYARCHDIR = /home/robson/workspace/finance/RAILS_ENV=test/ruby/1.8/gems/mysql2-0.2.6/lib$(target_prefix)
 
 TARGET_SO     = $(DLLIB)
 CLEANLIBS     = $(TARGET).so $(TARGET).il? $(TARGET).tds $(TARGET).map

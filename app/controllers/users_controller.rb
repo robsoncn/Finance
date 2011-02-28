@@ -42,7 +42,7 @@ class UsersController < ApplicationController
     @users = current_user
 
     respond_to do |format|
-      if @post.update_attributes(params[:users])
+      if @users.update_attributes(params[:users])
         flash[:notice] = 'User was successfully updated.'
         format.html { redirect_to(@users) }
         format.xml  { head :ok }
@@ -57,9 +57,10 @@ class UsersController < ApplicationController
   def destroy
     @user = current_user
     @user.destroy
-
+    session[:user_id] = nil
+    
     respond_to do |format|
-      format.html { redirect_to(users_url) }
+      format.html { redirect_to(login_path) }
       format.xml  { head :ok }
     end
   end

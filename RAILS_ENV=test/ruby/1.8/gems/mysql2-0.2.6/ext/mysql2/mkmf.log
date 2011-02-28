@@ -1,6 +1,6 @@
 have_func: checking for rb_thread_blocking_region()... -------------------- no
 
-"gcc -o conftest -I. -I/usr/lib/ruby/1.8/x86_64-linux -I.    -fno-strict-aliasing -g -g -O2  -fPIC   conftest.c  -L. -L/usr/lib -L. -Wl,-Bsymbolic-functions -rdynamic -Wl,-export-dynamic     -lruby1.8-static  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i686-linux -I.  -D_FILE_OFFSET_BITS=64  -fno-strict-aliasing -g -g -O2  -fPIC   conftest.c  -L. -L/usr/lib -L. -Wl,-Bsymbolic-functions -rdynamic -Wl,-export-dynamic     -lruby1.8-static  -lpthread -lrt -ldl -lcrypt -lm   -lc"
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘rb_thread_blocking_region’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -12,9 +12,9 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return 0; }
 /* end */
 
-"gcc -o conftest -I. -I/usr/lib/ruby/1.8/x86_64-linux -I.    -fno-strict-aliasing -g -g -O2  -fPIC   conftest.c  -L. -L/usr/lib -L. -Wl,-Bsymbolic-functions -rdynamic -Wl,-export-dynamic     -lruby1.8-static  -lpthread -lrt -ldl -lcrypt -lm   -lc"
-/tmp/ccwP1fzl.o: In function `t':
-/home/wilbert/apps/Finance/RAILS_ENV=test/ruby/1.8/gems/mysql2-0.2.6/ext/mysql2/conftest.c:3: undefined reference to `rb_thread_blocking_region'
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i686-linux -I.  -D_FILE_OFFSET_BITS=64  -fno-strict-aliasing -g -g -O2  -fPIC   conftest.c  -L. -L/usr/lib -L. -Wl,-Bsymbolic-functions -rdynamic -Wl,-export-dynamic     -lruby1.8-static  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+/tmp/ccKSMLQH.o: In function `t':
+/home/robson/workspace/finance/RAILS_ENV=test/ruby/1.8/gems/mysql2-0.2.6/ext/mysql2/conftest.c:3: undefined reference to `rb_thread_blocking_region'
 collect2: ld returned 1 exit status
 checked program was:
 /* begin */
@@ -27,7 +27,7 @@ checked program was:
 
 have_header: checking for mysql.h... -------------------- yes
 
-"gcc -E -I. -I/usr/lib/ruby/1.8/x86_64-linux -I.    -I/usr/include/mysql  -DBIG_JOINS=1  -fno-strict-aliasing   -DUNIV_LINUX -DUNIV_LINUX -fno-strict-aliasing -g -g -O2  -fPIC    conftest.c -o conftest.i"
+"gcc -E -I. -I/usr/lib/ruby/1.8/i686-linux -I.  -D_FILE_OFFSET_BITS=64  -I/usr/include/mysql  -DBIG_JOINS=1  -fno-strict-aliasing   -DUNIV_LINUX -DUNIV_LINUX -fno-strict-aliasing -g -g -O2  -fPIC    conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include <mysql.h>
@@ -37,7 +37,7 @@ checked program was:
 
 have_header: checking for errmsg.h... -------------------- yes
 
-"gcc -E -I. -I/usr/lib/ruby/1.8/x86_64-linux -I.    -I/usr/include/mysql  -DBIG_JOINS=1  -fno-strict-aliasing   -DUNIV_LINUX -DUNIV_LINUX -fno-strict-aliasing -g -g -O2  -fPIC    conftest.c -o conftest.i"
+"gcc -E -I. -I/usr/lib/ruby/1.8/i686-linux -I.  -D_FILE_OFFSET_BITS=64  -I/usr/include/mysql  -DBIG_JOINS=1  -fno-strict-aliasing   -DUNIV_LINUX -DUNIV_LINUX -fno-strict-aliasing -g -g -O2  -fPIC    conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include <errmsg.h>
@@ -47,7 +47,7 @@ checked program was:
 
 have_header: checking for mysqld_error.h... -------------------- yes
 
-"gcc -E -I. -I/usr/lib/ruby/1.8/x86_64-linux -I.    -I/usr/include/mysql  -DBIG_JOINS=1  -fno-strict-aliasing   -DUNIV_LINUX -DUNIV_LINUX -fno-strict-aliasing -g -g -O2  -fPIC    conftest.c -o conftest.i"
+"gcc -E -I. -I/usr/lib/ruby/1.8/i686-linux -I.  -D_FILE_OFFSET_BITS=64  -I/usr/include/mysql  -DBIG_JOINS=1  -fno-strict-aliasing   -DUNIV_LINUX -DUNIV_LINUX -fno-strict-aliasing -g -g -O2  -fPIC    conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include <mysqld_error.h>

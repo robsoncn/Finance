@@ -1,6 +1,6 @@
 have_library: checking for main() in -lc... -------------------- yes
 
-"gcc -o conftest -I. -I/usr/lib/ruby/1.8/x86_64-linux -I.    -fno-strict-aliasing -g -g -O2  -fPIC   -O0 -Wall -Werror conftest.c  -L. -L/usr/lib -L. -Wl,-Bsymbolic-functions -rdynamic -Wl,-export-dynamic     -lruby1.8-static -lc  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i686-linux -I.  -D_FILE_OFFSET_BITS=64  -fno-strict-aliasing -g -g -O2  -fPIC   -O0 -Wall -Werror conftest.c  -L. -L/usr/lib -L. -Wl,-Bsymbolic-functions -rdynamic -Wl,-export-dynamic     -lruby1.8-static -lc  -lpthread -lrt -ldl -lcrypt -lm   -lc"
 checked program was:
 /* begin */
 1: /*top*/
