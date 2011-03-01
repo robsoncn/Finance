@@ -4,3 +4,4 @@ tmp/**/*
 config/database.yml
 db/*.sqlite3
 RAILS_ENV=test/*
+RAILS_ENV=test/**/*
