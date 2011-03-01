@@ -10,12 +10,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110224172514) do
+ActiveRecord::Schema.define(:version => 20110301174031) do
 
   create_table "users", :force => true do |t|
     t.string   "nome"
     t.string   "email"
-    t.string   "password"
+    t.string   "password_hash"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

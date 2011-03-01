@@ -39,18 +39,24 @@ class UsersController < ApplicationController
   end
 
   def update
-    @users = current_user
+    @user = current_user
 
     respond_to do |format|
-      if @users.update_attributes(params[:user])
+      unless @user.old_password.nil? or @user.match_password?(params[:user][:old_password]) 
+        flash[:error] = "Password antigo não confere"
+        render :action => "edit"
+        return        
+      end
+      
+      if @user.update_attributes(params[:user])
         flash[:notice] = 'User was successfully updated.'
-        format.html { redirect_to(@users) }
+        format.html { redirect_to(@user) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
         format.xml  { render :xml => @user.errors,
-	                  :status => :unprocessable_entity }
-      end
+                    :status => :unprocessable_entity }
+      end  
     end
   end
 

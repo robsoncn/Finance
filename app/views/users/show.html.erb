@@ -8,10 +8,5 @@
   <%= @user.email %>
 </p>
 
-<p>
-  <b>Data:</b>
-  <%= @user.password %>
-</p>
-
 
 <%= link_to 'Edit', edit_user_path(@user) %> | <%= link_to 'Apagar minha conta', @user, :confirm => "Você tem certeza?", :method => :delete  %>

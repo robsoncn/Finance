@@ -18,9 +18,19 @@
     <%= f.label :email %><br />
     <%= f.text_field :email %>
   </div>
+  <% unless @user.new_record? -%>
+    <div>
+      <%= f.label :old_password %><br/>
+      <%= f.password_field :old_password %>
+    </div>  
+  <% end -%>
   <div class="field">
     <%= f.label :password %><br />
-    <%= f.text_field :password %>
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
     <%= f.submit %>
