@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   
   def new
     @user = User.new
-    
+        
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @user}
@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
 
   def edit
-    @user = current_user
+   @user = current_user
   end
 
   def show
@@ -42,7 +42,7 @@ class UsersController < ApplicationController
     @users = current_user
 
     respond_to do |format|
-      if @users.update_attributes(params[:users])
+      if @users.update_attributes(params[:user])
         flash[:notice] = 'User was successfully updated.'
         format.html { redirect_to(@users) }
         format.xml  { head :ok }
