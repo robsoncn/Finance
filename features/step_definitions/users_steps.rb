@@ -19,6 +19,7 @@ end
 
 Given /^I am logged in user$/ do
   User.create!(:nome => "Chuck Norris", :email => "chucknorris@gmail.com", :password => "123456")
+
   
   visit '/login'
   fill_in "Email", :with => "chucknorris@gmail.com"

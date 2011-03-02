@@ -20,9 +20,9 @@ class User < ActiveRecord::Base
   end
   
   def prepare_password
-    unless password.blank?
-      self.password_hash = encrypt_password(self.password)
-    end
+   unless password.blank?
+   self.password_hash = encrypt_password(self.password)
+	end
   end
   
   def encrypt_password(pass)
