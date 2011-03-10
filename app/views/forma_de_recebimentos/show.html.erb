@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome da forma:</b>
+  <%= @forma_de_recebimento.nome_da_forma %>
+</p>
+
+<p>
+  <b>Descricao da forma:</b>
+  <%= @forma_de_recebimento.descricao_da_forma %>
+</p>
+
+
+<%= link_to 'Edit', edit_forma_de_recebimento_path(@forma_de_recebimento) %> |
+<%= link_to 'Back', forma_de_recebimentos_path %>

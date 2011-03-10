@@ -10,7 +10,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110301174031) do
+ActiveRecord::Schema.define(:version => 20110310135441) do
+
+  create_table "categoria_do_recebimentos", :force => true do |t|
+    t.string   "nome_da_categoria"
+    t.string   "descricao_da_categoria"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "forma_de_recebimentos", :force => true do |t|
+    t.string   "nome_da_forma"
+    t.string   "descricao_da_forma"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tipo_de_recebimentos", :force => true do |t|
+    t.string   "nome_do_tipo"
+    t.string   "descricao_do_tipo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "nome"

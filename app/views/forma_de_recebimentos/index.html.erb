@@ -1,0 +1,25 @@
+<h1>Listing forma_de_recebimentos</h1>
+
+<table>
+  <tr>
+    <th>Nome da forma</th>
+    <th>Descricao da forma</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @forma_de_recebimentos.each do |forma_de_recebimento| %>
+  <tr>
+    <td><%= forma_de_recebimento.nome_da_forma %></td>
+    <td><%= forma_de_recebimento.descricao_da_forma %></td>
+    <td><%= link_to 'Show', forma_de_recebimento %></td>
+    <td><%= link_to 'Edit', edit_forma_de_recebimento_path(forma_de_recebimento) %></td>
+    <td><%= link_to 'Destroy', forma_de_recebimento, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Forma de recebimento', new_forma_de_recebimento_path %>

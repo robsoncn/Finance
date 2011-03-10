@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome do tipo:</b>
+  <%= @tipo_de_recebimento.nome_do_tipo %>
+</p>
+
+<p>
+  <b>Descricao do tipo:</b>
+  <%= @tipo_de_recebimento.descricao_do_tipo %>
+</p>
+
+
+<%= link_to 'Edit', edit_tipo_de_recebimento_path(@tipo_de_recebimento) %> |
+<%= link_to 'Back', tipo_de_recebimentos_path %>

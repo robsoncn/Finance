@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome da categoria:</b>
+  <%= @categoria_do_recebimento.nome_da_categoria %>
+</p>
+
+<p>
+  <b>Descricao da categoria:</b>
+  <%= @categoria_do_recebimento.descricao_da_categoria %>
+</p>
+
+
+<%= link_to 'Edit', edit_categoria_do_recebimento_path(@categoria_do_recebimento) %> |
+<%= link_to 'Back', categoria_do_recebimentos_path %>
