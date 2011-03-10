@@ -1,0 +1,25 @@
+<h1>Listing payament_methods</h1>
+
+<table>
+  <tr>
+    <th>Nome do metodo</th>
+    <th>Descricao do metodo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @payament_methods.each do |payament_method| %>
+  <tr>
+    <td><%= payament_method.nome_do_metodo %></td>
+    <td><%= payament_method.descricao_do_metodo %></td>
+    <td><%= link_to 'Show', payament_method %></td>
+    <td><%= link_to 'Edit', edit_payament_method_path(payament_method) %></td>
+    <td><%= link_to 'Destroy', payament_method, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Payament method', new_payament_method_path %>

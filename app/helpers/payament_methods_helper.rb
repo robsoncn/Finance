@@ -1,0 +1,2 @@
+module PayamentMethodsHelper
+end

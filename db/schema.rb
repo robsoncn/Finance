@@ -26,6 +26,34 @@ ActiveRecord::Schema.define(:version => 20110310182428) do
     t.datetime "updated_at"
   end
 
+  create_table "payament_categories", :force => true do |t|
+    t.string   "nome_da_categoria"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "payament_methods", :force => true do |t|
+    t.string   "nome_do_metodo"
+    t.string   "descricao_do_metodo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "payament_types", :force => true do |t|
+    t.string   "nome_do_tipo"
+    t.string   "descricao_do_tipo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "payaments", :force => true do |t|
+    t.date     "data_do_pagamento"
+    t.decimal  "valor_do_pagamento",     :precision => 10, :scale => 0
+    t.string   "descricao_do_pagamento"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "recebimentos", :force => true do |t|
     t.date     "data_recebimento"
     t.decimal  "valor_recebimento",           :precision => 10, :scale => 0
