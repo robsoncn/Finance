@@ -1,5 +1,5 @@
 Finance::Application.routes.draw do
-	
+
   resources :payament_categories
 
   resources :payament_methods
@@ -8,14 +8,20 @@ Finance::Application.routes.draw do
 
   resources :payament_types
 
+  resources :forma_de_recebimentos
+
+  resources :categoria_do_recebimentos
+
+  resources :tipo_de_recebimentos
+
   resources :sessions
 
 	match "profile", :to => "users#show", :as => "profile"
 	match "logout", :to => "sessions#destroy", :as => "logout"
 	match "login", :to => "sessions#new", :as => "login"
-	
+
 	resources :users
-	
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -73,3 +79,4 @@ Finance::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
 end
+

@@ -1,0 +1,25 @@
+<%= form_for(@tipo_de_recebimento) do |f| %>
+  <% if @tipo_de_recebimento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tipo_de_recebimento.errors.count, "error") %> prohibited this tipo_de_recebimento from being saved:</h2>
+
+      <ul>
+      <% @tipo_de_recebimento.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome_do_tipo %><br />
+    <%= f.text_field :nome_do_tipo %>
+  </div>
+  <div class="field">
+    <%= f.label :descricao_do_tipo %><br />
+    <%= f.text_field :descricao_do_tipo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

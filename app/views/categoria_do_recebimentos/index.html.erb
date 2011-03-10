@@ -1,0 +1,25 @@
+<h1>Listing categoria_do_recebimentos</h1>
+
+<table>
+  <tr>
+    <th>Nome da categoria</th>
+    <th>Descricao da categoria</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @categoria_do_recebimentos.each do |categoria_do_recebimento| %>
+  <tr>
+    <td><%= categoria_do_recebimento.nome_da_categoria %></td>
+    <td><%= categoria_do_recebimento.descricao_da_categoria %></td>
+    <td><%= link_to 'Show', categoria_do_recebimento %></td>
+    <td><%= link_to 'Edit', edit_categoria_do_recebimento_path(categoria_do_recebimento) %></td>
+    <td><%= link_to 'Destroy', categoria_do_recebimento, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Categoria do recebimento', new_categoria_do_recebimento_path %>
