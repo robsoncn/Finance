@@ -1,11 +1,13 @@
 Finance::Application.routes.draw do
-	
+
+  resources :recebimentos
+
   resources :forma_de_recebimentos
 
   resources :categoria_do_recebimentos
 
   resources :tipo_de_recebimentos
-
+	
   resources :sessions
 
 	match "profile", :to => "users#show", :as => "profile"

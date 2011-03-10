@@ -1,0 +1,35 @@
+<h1>Listing recebimentos</h1>
+
+<table>
+  <tr>
+    <th>Data recebimento</th>
+    <th>Valor recebimento</th>
+    <th>Descricao recebimento</th>
+    <th>Usuario</th>
+    <th>Tipo de recebimento</th>
+    <th>Forma de recebimento</th>
+    <th>Categoria do recebimento</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @recebimentos.each do |recebimento| %>
+  <tr>
+    <td><%= recebimento.data_recebimento %></td>
+    <td><%= recebimento.valor_recebimento %></td>
+    <td><%= recebimento.descricao_recebimento %></td>
+    <td><%= recebimento.usuario %></td>
+    <td><%= recebimento.tipo_de_recebimento %></td>
+    <td><%= recebimento.forma_de_recebimento %></td>
+    <td><%= recebimento.categoria_do_recebimento %></td>
+    <td><%= link_to 'Show', recebimento %></td>
+    <td><%= link_to 'Edit', edit_recebimento_path(recebimento) %></td>
+    <td><%= link_to 'Destroy', recebimento, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Recebimento', new_recebimento_path %>

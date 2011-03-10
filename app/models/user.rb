@@ -1,4 +1,9 @@
 class User < ActiveRecord::Base
+
+  has_many :recebimentos
+  has_many :tipo_de_recebimentos
+  has_many :categoria_do_recebimentos
+	
   
   validates_length_of :nome, :minimum => 4
   validates_format_of :email,:with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
