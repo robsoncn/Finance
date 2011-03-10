@@ -1,0 +1,25 @@
+<%= form_for(@payament_method) do |f| %>
+  <% if @payament_method.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@payament_method.errors.count, "error") %> prohibited this payament_method from being saved:</h2>
+
+      <ul>
+      <% @payament_method.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome_do_metodo %><br />
+    <%= f.text_field :nome_do_metodo %>
+  </div>
+  <div class="field">
+    <%= f.label :descricao_do_metodo %><br />
+    <%= f.text_field :descricao_do_metodo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

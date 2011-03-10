@@ -1,5 +1,13 @@
 Finance::Application.routes.draw do
 	
+  resources :payament_categories
+
+  resources :payament_methods
+
+  resources :payaments
+
+  resources :payament_types
+
   resources :sessions
 
 	match "profile", :to => "users#show", :as => "profile"

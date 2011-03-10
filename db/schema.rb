@@ -10,7 +10,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110301174031) do
+ActiveRecord::Schema.define(:version => 20110310135236) do
+
+  create_table "payament_categories", :force => true do |t|
+    t.string   "nome_da_categoria"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "payament_methods", :force => true do |t|
+    t.string   "nome_do_metodo"
+    t.string   "descricao_do_metodo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "payament_types", :force => true do |t|
+    t.string   "nome_do_tipo"
+    t.string   "descricao_do_tipo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "payaments", :force => true do |t|
+    t.date     "data_do_pagamento"
+    t.decimal  "valor_do_pagamento",     :precision => 10, :scale => 0
+    t.string   "descricao_do_pagamento"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "nome"
