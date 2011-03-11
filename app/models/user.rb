@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   has_many :recebimentos
   has_many :tipo_de_recebimentos
   has_many :categoria_do_recebimentos
+  has_many :forma_de_recebimentos
 	
   
   validates_length_of :nome, :minimum => 4

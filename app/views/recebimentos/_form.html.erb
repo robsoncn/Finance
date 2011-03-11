@@ -29,12 +29,17 @@
   </div>
   <div class="field">
     <%= f.label :forma_de_recebimento_id %><br />
-    <%= f.text_field :forma_de_recebimento_id %>
+  	<%= f.select :forma_de_recebimento_id, @forma_de_recebimentos.collect{|c| [c.nome_da_forma, c.id] }  %>
   </div>
   <div class="field">
+    <%= f.label :categoria_do_recebimento_id%><br />
+    <%= f.select :categoria_do_recebimento_id, @categoria_do_recebimentos.collect{|b| [b.nome_da_categoria, b.id] }  %>
+  </div>
+ <!--  <div class="field">
     <%= f.label :categoria_do_recebimento_id %><br />
     <%= f.text_field :categoria_do_recebimento_id %>
-  </div>
+    
+  </div> -->
   <div class="actions">
     <%= f.submit %>
   </div>

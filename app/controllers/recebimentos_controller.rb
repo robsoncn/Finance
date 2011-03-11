@@ -85,7 +85,8 @@ class RecebimentosController < ApplicationController
   
   def collection 
   	@tipo_de_recebimentos = current_user.tipo_de_recebimentos
-  
+    @categoria_do_recebimentos = current_user.categoria_do_recebimentos
+    @forma_de_recebimentos = current_user.forma_de_recebimentos
   end
   
 end

@@ -40,7 +40,8 @@ class TipoDeRecebimentosController < ApplicationController
   # POST /tipo_de_recebimentos
   # POST /tipo_de_recebimentos.xml
   def create
-    @tipo_de_recebimento = current_user.tipo_de_recebimentos.new(params[:tipo_de_recebimento])
+   @tipo_de_recebimento = current_user.tipo_de_recebimentos.new(params[:tipo_de_recebimento])
+   
 
     respond_to do |format|
       if @tipo_de_recebimento.save
