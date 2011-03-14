@@ -1,6 +1,9 @@
 class PagamentosController < ApplicationController
   # GET /pagamentos
   # GET /pagamentos.xml
+
+  before_filter :collect, :only => [:new, :edit, :create, :update]
+
   def index
     @pagamentos = Pagamento.all
 
@@ -80,4 +83,11 @@ class PagamentosController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def collect
+    @tipo_do_pagamentos = TipoDoPagamento.all
+    @metodo_de_pagamentos = MetodoDePagamento.all
+    @categoria_do_pagamentos = CategoriaDoPagamento.all
+  end
 end
+
