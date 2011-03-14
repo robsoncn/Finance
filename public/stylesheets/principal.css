@@ -1,0 +1,432 @@
+body {
+	background-color: #FFFFFF;
+	text-align:center;
+	margin: 0px;	
+}
+	a:link {color: #000333}
+	a:visited {color: #000333}
+	a:hover {color: #FFD700}
+
+.quadro_principal {
+	background-color: #FFFFFF;
+	width: 1000px;
+	height:100%;
+	margin: 0 auto;
+	margin-top: 5px;
+	text-align:center;
+	}
+
+	.faixa_superior {
+		background-color: #2B6088 ;
+		width: 1000px;
+		height: 25px;
+		margin-top: 0 auto;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:20px;	
+		font-weight:bold;
+		padding-top: 5px;
+		color: #FFFFFF;	
+		text-align: center;
+		}
+
+
+.quadro_superior {
+	background-color:  ;
+	width: 1000px;
+	height: 200px;
+	margin-top: 0 auto;
+	text-align: center;
+	}
+
+		#superior_esquerdo {
+		background-color: #FFFFFF;
+		width: 200px;
+		height: 200px;
+		float:left;
+		filter:opacity(alpha=80); /* para o IE */
+		-moz-opacity:0.80; /* para o FireFox */
+		opacity:0.80; /* para o outros Navegadores */
+		}
+	
+		#superior_meio {
+		background-color: #FFFFFF;
+		width: 600px;
+		height: 200px;
+		float: left;
+		filter:opacity(alpha=80); /* para o IE */
+		-moz-opacity:0.80; /* para o FireFox */
+		opacity:0.80; /* para o outros Navegadores */
+		}
+			#superior_logo{
+			width: 400px;
+			height: 174px;
+			margin: 12px 10px 10px 12px;
+			}
+	
+		#superior_direito {
+		background-color: #FFFFFF;
+		width: 200px;
+		height: 200px;
+		float:left;
+		filter:opacity(alpha=80); /* para o IE */
+		-moz-opacity:0.80; /* para o FireFox */
+		opacity:0.80; /* para o outros Navegadores */
+		}
+	
+.linha_divisao {
+	background-color: #FFD700;
+	width: 1000px;
+	height: 4px;
+	clear:both;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+	text-align:center;
+	color: #FF4433;
+}	
+
+.linha_divisao_titulo {
+	background-color: #FFD700;
+	width: 650px;
+	height: 2px;
+	text-align:left;
+	margin-left:5px;
+	}	
+
+
+.quadro_menu {
+	background-color: #2B6088;
+	width: 1000px;
+	height: 34px;
+	display: block;
+	}	
+	
+	#quadro_corpo {
+	background-color: #FFFFFF;
+	width: 1000px;
+	overflow: hidden; 
+	}
+
+	#corpo_esquerdo {
+	background-color: #6495ED;
+	width: 200px;
+	height: 100%;
+	float:left;
+	}
+	
+	#corpo_meio {
+	background-color: #FFFFFF;
+	width:  700px;
+	overflow: hidden; 
+	float: left;
+	z-index: -1;
+	text-align:center;
+	}
+	
+		.quadro_animacao {
+		background-color: #FFFFFF;
+		width: 698px;
+		height: 310px;
+		text-align:center;
+		}		
+	
+		#noticias{
+		background-color: #FFFFFF;
+		width: 700px;
+		height: 240px;
+		margin-top: 8px;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:12px;
+		font-weight: bold;
+		text-align:left;
+		}
+		
+		.noticias_destaque_foto {
+		background-color: #FFFFFF;
+		width: 200px;
+		height: 190px;
+		float:left;
+		padding-left:5px;
+		padding-top:5px;
+		margin-left:5px;
+		text-align:center;	
+		}
+		
+		.noticias_destaque_texto {
+		background-color: #FFFFFF;
+		width: 600px;
+		height: auto;
+		padding-left:5px;
+		margin-left:15px;
+		display: block;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:12px;
+		text-align:left;	
+		}
+		
+		.titulo {
+		width:400px;
+		height: 27px;
+		background-color: ;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 20px;
+		margin-left:15px;
+		font-weight: bold;
+		text-align:left;
+		padding-top: 20px;
+		text-decoration: none;
+		color: #000080;
+		}
+		
+		.titulo_noticias {
+		width:;
+		height: 5px ;
+		background-color: ;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 18px;
+		font-weight: bold;
+		text-align:center;
+		color: #000000;
+		}
+		
+			.subtitulo_noticias {
+			width:;
+			height: ;
+			background-color:  ;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 12px;
+			font-weight: bold;
+			text-align:center;
+			color: #8B8386;
+			}
+			
+			.linha_divisao_noticia {
+			background-color: #FFD700;
+			width: 685px;
+			height: 1px;
+			text-align:center;
+			margin-left:5px;
+			}	
+			
+			.titulo_textos_internos {
+			width:;
+			height: 35px ;
+			background-color: ;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 18px;
+			font-weight: bold;
+			color: #000333;
+			padding-top: 20px;
+			margin-left: 8px;
+			text-align:left;
+			
+			}
+			
+			#textos_internos{
+			background-color: #FFFFFF;
+			width: 680px;
+			height: ;
+			margin: 8px 12px 10px 8px;
+			font-family:Arial, Helvetica, sans-serif;
+			font-size:14px;
+			text-align:justify;
+			}
+	
+
+			.noticia_interna{
+			background-color: #FFFFFF;
+			width: 670px;
+			height: auto;	
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 14px;
+			margin-left: 25px;
+			text-align:justify;
+			}		
+
+				.comentarios{
+				background-color: #FFFFFF;
+				width: 670px;
+				height: auto;	
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 14px;
+				margin-left: 25px;
+				padding-top: 20px;
+				text-align:justify;
+				float: left;
+				}		
+
+				#maisnoticias_interna{
+				background-color: #FFFFFF;
+				width: 670px;
+				height: ;	
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 12px;
+				margin-left: 15px;
+				padding-top: 20px;
+				float: left;
+				}	
+
+				#corpo_noticia {
+				background-color: #FFFFFF;
+				}
+
+				#corpo_fotos {
+				background-color: #FFF333;
+				float:right;
+				}
+
+	#corpo_direito {
+	background-color: #6495ED;
+	width: 300px;
+		z-index: 5;
+	float:left;
+	}
+		
+.rodape {
+background-color: #2B6088;
+width: 1000px;
+height: 40px;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-weight: bold;
+padding-top:5px;
+color: #FFFFFF;
+}
+		
+#lista_especialidades{
+background-color: #FFFFFF;
+width: 680px;
+height: auto;
+margin-top: 3px;
+font-family:Arial, Helvetica, sans-serif;
+font-size:14px;
+text-align:left;		
+}	
+	
+
+#padrao {
+position: relative;
+background-color: ;
+margin-left: 10px;
+text-align:center;		
+	
+}
+	
+	/*Inicio CSS menu superior */
+	
+	#menu ul {
+	list-style-type: none;
+	margin-left: -28px;
+	position:absolute;
+	z-index:4;
+	}
+
+	#menu ul li {
+	float:left;
+	}
+
+	#menu li a {
+	background-color: #2B6088;
+	height:28px;
+	display:block;
+	padding: 3px 5px 0 5px;
+	margin: -14px 20px 0 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+	color: #FFF;
+	
+	}
+
+
+	#menu ul li a:hover{
+	color: #000;
+	background-color: #FFD700;
+	}
+
+	#menu li ul{
+	position: absolute;
+	visibility: hidden;
+	padding-left:-4px;
+	margin-top:0px;
+	}
+
+	#menu li ul li{
+	 clear:both;
+	 margin-left: 4px;
+	 position:relative;
+	 width:140px;
+	 background-color: #2B6088;
+	 border-bottom: 1px solid  #FFD700;
+	 border-top: 1px solid #FFD700;
+	 padding-top: 15px;
+	 left:-45px;
+	}
+
+	#menu li ul li a{
+	 display:block;
+	 width:130px;
+	}
+
+	#menu li:hover > ul  /* lista na dependencia de li */
+
+	{
+	 visibility: visible;
+	 margin-left:2px;
+	}
+	
+/* Tabelas */
+
+table, td{
+	font:100% Arial, Helvetica, sans-serif; 
+}
+table{width:90%;border-collapse:collapse;margin:1em 0; margin-left: 30px;}
+th, td{text-align:left;padding:.5em;border:1px solid #fff;}
+th{background:#328aa4 url(tr_back.gif) repeat-x;color:#fff;}
+td{background:#e5f1f4;}
+
+/* tablecloth styles */
+
+tr.even td{background:#e5f1f4;}
+tr.odd td{background:#f8fbfc;}
+
+th.over, tr.even th.over, tr.odd th.over{background:#4a98af;}
+th.down, tr.even th.down, tr.odd th.down{background:#bce774;}
+th.selected, tr.even th.selected, tr.odd th.selected{}
+
+td.over, tr.even td.over, tr.odd td.over{background:#ecfbd4;}
+td.down, tr.even td.down, tr.odd td.down{background:#bce774;color:#fff;}
+td.selected, tr.even td.selected, tr.odd td.selected{background:#bce774;color:#555;}
+
+/* use this if you want to apply different styleing to empty table cells*/
+td.empty, tr.odd td.empty, tr.even td.empty{background:#fff;}
+
+
+/* Formulários */
+
+input, textarea, select { font-size:100%; padding:5px; -moz-box-shadow:0 0 10px #EEEEEE inset;border:1px solid #CCCCCC;-moz-border-radius:2px;padding:8px;background-color:#FFF; text-align: left;}
+
+textarea { width:400px; height: 110px; font-size:100%; padding:5px; -moz-box-shadow:0 0 10px #EEEEEE inset;border:1px solid #CCCCCC;-moz-border-radius:2px;padding:8px;background-color:#FFF; text-align: left;}
+
+img {border:4px solid #005AAB;margin:5px;display:inline}
+
+
+/* Listas */
+
+ul 
+{ 
+    list-style-type: cicle; 
+} 
+ul li{ 
+    padding: 0px 0px; 
+    color: #000333; 
+} 
+ol 
+{ 
+    list-style-type: decimal-numeração; 
+} 
+ol li{ 
+    color: #666666; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+}

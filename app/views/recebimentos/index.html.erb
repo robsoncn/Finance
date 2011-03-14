@@ -1,28 +1,22 @@
-<h1>Listing recebimentos</h1>
+<h1>Lista de Contas Recebidas</h1>
 
 <table>
   <tr>
-    <th>Data recebimento</th>
-    <th>Valor recebimento</th>
-    <th>Descricao recebimento</th>
-    <th>Usuario</th>
-    <th>Tipo de recebimento</th>
-    <th>Forma de recebimento</th>
-    <th>Categoria do recebimento</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Data</th>
+    <th>Valor</th>
+    <th>Tipo</th>
+    <th>Forma</th>
+    <th>Categoria</th>
+   
   </tr>
 
 <% @recebimentos.each do |recebimento| %>
   <tr>
     <td><%= recebimento.data_recebimento %></td>
     <td><%= recebimento.valor_recebimento %></td>
-    <td><%= recebimento.descricao_recebimento %></td>
-    <td><%= recebimento.usuario %></td>
-    <td><%= recebimento.tipo_de_recebimento %></td>
-    <td><%= recebimento.forma_de_recebimento %></td>
-    <td><%= recebimento.categoria_do_recebimento %></td>
+    <td><%= recebimento.tipo_de_recebimento.nome_do_tipo %></td>
+    <td><%= recebimento.forma_de_recebimento.nome_da_forma %></td>
+    <td><%= recebimento.categoria_do_recebimento.nome_da_categoria %></td>
     <td><%= link_to 'Show', recebimento %></td>
     <td><%= link_to 'Edit', edit_recebimento_path(recebimento) %></td>
     <td><%= link_to 'Destroy', recebimento, :confirm => 'Are you sure?', :method => :delete %></td>

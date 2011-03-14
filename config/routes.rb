@@ -1,6 +1,8 @@
 Finance::Application.routes.draw do
 
   resources :recebimentos
+  
+  	match "recebimentos", :to => "recebimentos#show", :as => "recebimentos"
 
   resources :payament_categories
 
