@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome do tipo:</b>
+  <%= @tipo_do_pagamento.nome_do_tipo %>
+</p>
+
+<p>
+  <b>Descricao do tipo:</b>
+  <%= @tipo_do_pagamento.descricao_do_tipo %>
+</p>
+
+
+<%= link_to 'Edit', edit_tipo_do_pagamento_path(@tipo_do_pagamento) %> |
+<%= link_to 'Back', tipo_do_pagamentos_path %>

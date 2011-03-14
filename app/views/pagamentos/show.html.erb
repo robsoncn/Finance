@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Data do pagamento:</b>
+  <%= @pagamento.data_do_pagamento %>
+</p>
+
+<p>
+  <b>Valor do pagamento:</b>
+  <%= @pagamento.valor_do_pagamento %>
+</p>
+
+<p>
+  <b>Descricao do pagamento:</b>
+  <%= @pagamento.descricao_do_pagamento %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @pagamento.user %>
+</p>
+
+<p>
+  <b>Tipo do pagamento:</b>
+  <%= @pagamento.tipo_do_pagamento %>
+</p>
+
+<p>
+  <b>Metodo de pagamento:</b>
+  <%= @pagamento.metodo_de_pagamento %>
+</p>
+
+<p>
+  <b>Categoria do pagamento:</b>
+  <%= @pagamento.categoria_do_pagamento %>
+</p>
+
+
+<%= link_to 'Edit', edit_pagamento_path(@pagamento) %> |
+<%= link_to 'Back', pagamentos_path %>

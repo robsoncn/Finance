@@ -1,0 +1,2 @@
+module TipoDoPagamentosHelper
+end

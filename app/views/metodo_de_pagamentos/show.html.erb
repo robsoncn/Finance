@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome do metodo:</b>
+  <%= @metodo_de_pagamento.nome_do_metodo %>
+</p>
+
+<p>
+  <b>Descricao do metodo:</b>
+  <%= @metodo_de_pagamento.descricao_do_metodo %>
+</p>
+
+
+<%= link_to 'Edit', edit_metodo_de_pagamento_path(@metodo_de_pagamento) %> |
+<%= link_to 'Back', metodo_de_pagamentos_path %>

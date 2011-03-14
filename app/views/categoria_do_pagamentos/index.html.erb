@@ -1,0 +1,23 @@
+<h1>Listing categoria_do_pagamentos</h1>
+
+<table>
+  <tr>
+    <th>Nome da categoria</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @categoria_do_pagamentos.each do |categoria_do_pagamento| %>
+  <tr>
+    <td><%= categoria_do_pagamento.nome_da_categoria %></td>
+    <td><%= link_to 'Show', categoria_do_pagamento %></td>
+    <td><%= link_to 'Edit', edit_categoria_do_pagamento_path(categoria_do_pagamento) %></td>
+    <td><%= link_to 'Destroy', categoria_do_pagamento, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Categoria do pagamento', new_categoria_do_pagamento_path %>

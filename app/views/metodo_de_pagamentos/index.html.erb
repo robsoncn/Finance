@@ -1,0 +1,25 @@
+<h1>Listing metodo_de_pagamentos</h1>
+
+<table>
+  <tr>
+    <th>Nome do metodo</th>
+    <th>Descricao do metodo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @metodo_de_pagamentos.each do |metodo_de_pagamento| %>
+  <tr>
+    <td><%= metodo_de_pagamento.nome_do_metodo %></td>
+    <td><%= metodo_de_pagamento.descricao_do_metodo %></td>
+    <td><%= link_to 'Show', metodo_de_pagamento %></td>
+    <td><%= link_to 'Edit', edit_metodo_de_pagamento_path(metodo_de_pagamento) %></td>
+    <td><%= link_to 'Destroy', metodo_de_pagamento, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Metodo de pagamento', new_metodo_de_pagamento_path %>

@@ -1,0 +1,25 @@
+<h1>Listing tipo_do_pagamentos</h1>
+
+<table>
+  <tr>
+    <th>Nome do tipo</th>
+    <th>Descricao do tipo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tipo_do_pagamentos.each do |tipo_do_pagamento| %>
+  <tr>
+    <td><%= tipo_do_pagamento.nome_do_tipo %></td>
+    <td><%= tipo_do_pagamento.descricao_do_tipo %></td>
+    <td><%= link_to 'Show', tipo_do_pagamento %></td>
+    <td><%= link_to 'Edit', edit_tipo_do_pagamento_path(tipo_do_pagamento) %></td>
+    <td><%= link_to 'Destroy', tipo_do_pagamento, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tipo do pagamento', new_tipo_do_pagamento_path %>

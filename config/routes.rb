@@ -1,14 +1,14 @@
 Finance::Application.routes.draw do
 
+  resources :pagamentos
+
+  resources :metodo_de_pagamentos
+
+  resources :categoria_do_pagamentos
+
+  resources :tipo_do_pagamentos
+
   resources :recebimentos
-
-  resources :payament_categories
-
-  resources :payament_methods
-
-  resources :payaments
-
-  resources :payament_types
 
   resources :forma_de_recebimentos
 
