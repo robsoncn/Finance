@@ -12,29 +12,34 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :data_recebimento %><br />
+    <%= f.label :data %><br />
     <%= f.date_select :data_recebimento %>
-  </div>
+  </div><br/>
   <div class="field">
-    <%= f.label :valor_recebimento %><br />
+    <%= f.label :valor %><br />
     <%= f.text_field :valor_recebimento %>
-  </div>
+  </div><br/>
   <div class="field">
-    <%= f.label :descricao_recebimento %><br />
+    <%= f.label :descricao %><br />
     <%= f.text_field :descricao_recebimento %>
-  </div>
+  </div><br/>
   <div class="field">
-    <%= f.label :tipo_de_recebimento_id%><br />
+    <%= f.label :tipo %><br />
     <%= f.select :tipo_de_recebimento_id, @tipo_de_recebimentos.collect{|t| [t.nome_do_tipo, t.id] }  %>
-  </div>
+  </div><br/>
   <div class="field">
-    <%= f.label :forma_de_recebimento_id %><br />
-    <%= f.text_field :forma_de_recebimento_id %>
-  </div>
+    <%= f.label :forma %><br />
+  	<%= f.select :forma_de_recebimento_id, @forma_de_recebimentos.collect{|c| [c.nome_da_forma, c.id] }  %>
+  </div><br/>
   <div class="field">
+    <%= f.label :categoria%><br />
+    <%= f.select :categoria_do_recebimento_id, @categoria_do_recebimentos.collect{|b| [b.nome_da_categoria, b.id] }  %>
+  </div>
+ <!--  <div class="field">
     <%= f.label :categoria_do_recebimento_id %><br />
     <%= f.text_field :categoria_do_recebimento_id %>
-  </div>
+    
+  </div> --><br/>
   <div class="actions">
     <%= f.submit %>
   </div>

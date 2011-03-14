@@ -1,39 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Data recebimento:</b>
-  <%= @recebimento.data_recebimento %>
-</p>
+<h1>Resumo do Recebimento</h1>
 
-<p>
-  <b>Valor recebimento:</b>
-  <%= @recebimento.valor_recebimento %>
-</p>
+<table>
+	<tr>
+	  <th>Data</th> <td><%= @recebimento.data_recebimento %></td>
+	</tr>
+	<tr>
+	  <th>Valor</th> <td><%= @recebimento.valor_recebimento %></td>
+	</tr>  
+	<tr>  
+	  <th>Descrição</th> <td><%= @recebimento.descricao_recebimento%></td>
+	</tr>  
+	<tr>  
+	  <th>Tipo</th>  <td><%= @recebimento.tipo_de_recebimento.nome_do_tipo %></td>
+	</tr>  
+	<tr>
+	  <th>Forma</th> <td><%= @recebimento.forma_de_recebimento.nome_da_forma %></td>
+	</tr>  
+  	<tr>
+  	  <th>Categoria</th><td><%= @recebimento.categoria_do_recebimento.nome_da_categoria %></td>
+  	</tr>  
+</table>
 
-<p>
-  <b>Descricao recebimento:</b>
-  <%= @recebimento.descricao_recebimento %>
-</p>
-
-<p>
-  <b>Usuario:</b>
-  <%= @recebimento.usuario %>
-</p>
-
-<p>
-  <b>Tipo de recebimento:</b>
-  <%= @recebimento.tipo_de_recebimento %>
-</p>
-
-<p>
-  <b>Forma de recebimento:</b>
-  <%= @recebimento.forma_de_recebimento %>
-</p>
-
-<p>
-  <b>Categoria do recebimento:</b>
-  <%= @recebimento.categoria_do_recebimento %>
-</p>
 
 
 <%= link_to 'Edit', edit_recebimento_path(@recebimento) %> |

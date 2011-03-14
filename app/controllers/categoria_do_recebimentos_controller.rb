@@ -40,7 +40,8 @@ class CategoriaDoRecebimentosController < ApplicationController
   # POST /categoria_do_recebimentos
   # POST /categoria_do_recebimentos.xml
   def create
-    @categoria_do_recebimento = CategoriaDoRecebimento.new(params[:categoria_do_recebimento])
+      @categoria_do_recebimento = current_user.categoria_do_recebimentos.new(params[:categoria_do_recebimento])
+     
 
     respond_to do |format|
       if @categoria_do_recebimento.save

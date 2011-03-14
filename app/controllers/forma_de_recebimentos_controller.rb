@@ -40,7 +40,8 @@ class FormaDeRecebimentosController < ApplicationController
   # POST /forma_de_recebimentos
   # POST /forma_de_recebimentos.xml
   def create
-    @forma_de_recebimento = FormaDeRecebimento.new(params[:forma_de_recebimento])
+  #@forma_de_recebimento = current_recebimento.forma_de_recebimentos.new(params[:forma_de_recebimento])
+   @forma_de_recebimento = current_user.forma_de_recebimentos.new(params[:forma_de_recebimento])
 
     respond_to do |format|
       if @forma_de_recebimento.save
