@@ -35,7 +35,7 @@
     <%= f.label :categoria%><br />
     <%= f.select :categoria_do_recebimento_id, @categoria_do_recebimentos.collect{|b| [b.nome_da_categoria, b.id] }  %>
 
-  <div class="actions">
+  <div class="actions"><br/>
     <%= f.submit %>
   </div>
 <% end %>
