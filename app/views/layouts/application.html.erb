@@ -1,32 +1,99 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
-    <%= stylesheet_link_tag "application" %>
-    <%= javascript_include_tag :defaults %>
-    <%= csrf_meta_tag %>
-    <%= yield(:head) %>
-  </head>
-  <body>
-  
-   
-    <div id="container">
-      <% if flash[:notice] -%>
-          <div class="notice">
-            <%= flash[:notice] %>
-          </div>
-      <% end -%>
-      <% if flash[:error] -%>
-          <div class="error">
-            <%= flash[:error] %>
-          </div>
-          
-      <% end -%>
+<head>
+  <title>SISTEMA DE CONTROLE FINANCEIRO</title>
+  <%= stylesheet_link_tag :all %>
+  <%= csrf_meta_tag %>
+</head>
+
+<body>
+
+<div class="quadro_principal">
+
+	<div class ="faixa_superior">
+		<%= yield :faixa_superior -%>
+	</div>
+	<div class="linha_divisao">
+	</div>
+	
+	<br/>
+	
+	
       <% if logged_in? -%>
-        <%= link_to 'Perfil', profile_path %> | 
-        <%= link_to 'Sair', logout_path %>
+        <div class="quadro_menu">
+		
+		<div id="menu">
+			<ul>
+			<li><%= link_to 'Recebimentos', recebimentos_path  %>
+				<ul>
+				<li><%= link_to 'Novo Recebimento', new_recebimento_path  %></li>
+				<li><%= link_to 'Cadastrar Tipo', tipo_de_recebimentos_path  %></li>
+				<li><%= link_to 'Cadastrar Forma', forma_de_recebimentos_path  %></li>
+				<li><%= link_to 'Cadastrar Categoria', categoria_do_recebimentos_path  %></li>
+				</ul>
+			</li>
+			<li>
+				<%= link_to 'Pagamentos', pagamentos_path  %>
+				<ul>
+				<li><%= link_to 'Novo Pagamento', new_pagamento_path  %></li>
+				<li><%= link_to 'Cadastrar Tipo', new_tipo_do_pagamento_path  %></li>
+				<li><%= link_to 'Cadastrar Método', metodo_de_pagamentos_path  %></li>
+				<li><%= link_to 'Cadastrar Categoria', categoria_do_pagamentos_path  %></li>
+				</ul>
+			</li>
+			<li>
+				<%= link_to 'Perfil', profile_path  %>
+			</li>
+			<li>
+				<%= link_to 'Sair',logout_path  %>
+			</li>
+			</ul>
+		</div>
+	  </div>
+     
       <% end -%>
       <%= yield %>
+	
+	 	
+	<div id="quadro_corpo">
+		<%= yield :conteudo -%>
+		
+		<h3>
+		<% if flash[:notice] -%>
+			<div class="notice">
+			<%= flash[:notice] %>
+		</div>
+		<% end -%>
+			<% if flash[:error] -%>
+			<div class="error">
+		<%= flash[:error] %>
+		</h3>
+		</div>
+          
+      <% end -%>
+				
+		<div id="corpo_meio">
+		<%= yield :corpo_meio -%>
+		</div>
+		
+		<div id="corpo_direito">
+		<%= yield :corpo_direito -%>
+		</div>
+		
+	</div>
+		
+	<div class="linha_divisao">
+	<%= yield :linha -%>
+	</div>
+		
+	 <div class="rodape">
+	<%= yield :rodape -%>
+	© COPYRIGHT 2011 - Khronus Soluções Ltda - Todos os direitos reservados<br/>
+	</div>
+	
+
     </div>
+    
+
   </body>
 </html>

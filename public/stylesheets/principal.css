@@ -17,14 +17,15 @@ body {
 	}
 
 	.faixa_superior {
-		background-color: #2B6088 ;
+		background-image: url("/images/banner_topo.png");
 		width: 1000px;
-		height: 25px;
+		height: 156px;
 		margin-top: 0 auto;
 		font-family:Arial, Helvetica, sans-serif;
 		font-size:20px;	
 		font-weight:bold;
 		padding-top: 5px;
+		padding-bottom: 15px;
 		color: #FFFFFF;	
 		text-align: center;
 		}
@@ -74,7 +75,7 @@ body {
 		}
 	
 .linha_divisao {
-	background-color: #FFD700;
+	background-color: #008888;
 	width: 1000px;
 	height: 4px;
 	clear:both;
@@ -84,14 +85,6 @@ body {
 	text-align:center;
 	color: #FF4433;
 }	
-
-.linha_divisao_titulo {
-	background-color: #FFD700;
-	width: 650px;
-	height: 2px;
-	text-align:left;
-	margin-left:5px;
-	}	
 
 
 .quadro_menu {
@@ -104,6 +97,8 @@ body {
 	#quadro_corpo {
 	background-color: #FFFFFF;
 	width: 1000px;
+	min-height: 50px;
+	
 	overflow: hidden; 
 	}
 
@@ -123,157 +118,6 @@ body {
 	text-align:center;
 	}
 	
-		.quadro_animacao {
-		background-color: #FFFFFF;
-		width: 698px;
-		height: 310px;
-		text-align:center;
-		}		
-	
-		#noticias{
-		background-color: #FFFFFF;
-		width: 700px;
-		height: 240px;
-		margin-top: 8px;
-		font-family:Arial, Helvetica, sans-serif;
-		font-size:12px;
-		font-weight: bold;
-		text-align:left;
-		}
-		
-		.noticias_destaque_foto {
-		background-color: #FFFFFF;
-		width: 200px;
-		height: 190px;
-		float:left;
-		padding-left:5px;
-		padding-top:5px;
-		margin-left:5px;
-		text-align:center;	
-		}
-		
-		.noticias_destaque_texto {
-		background-color: #FFFFFF;
-		width: 600px;
-		height: auto;
-		padding-left:5px;
-		margin-left:15px;
-		display: block;
-		font-family:Arial, Helvetica, sans-serif;
-		font-size:12px;
-		text-align:left;	
-		}
-		
-		.titulo {
-		width:400px;
-		height: 27px;
-		background-color: ;
-		font-family: Arial, Helvetica, sans-serif;
-		font-size: 20px;
-		margin-left:15px;
-		font-weight: bold;
-		text-align:left;
-		padding-top: 20px;
-		text-decoration: none;
-		color: #000080;
-		}
-		
-		.titulo_noticias {
-		width:;
-		height: 5px ;
-		background-color: ;
-		font-family: Arial, Helvetica, sans-serif;
-		font-size: 18px;
-		font-weight: bold;
-		text-align:center;
-		color: #000000;
-		}
-		
-			.subtitulo_noticias {
-			width:;
-			height: ;
-			background-color:  ;
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 12px;
-			font-weight: bold;
-			text-align:center;
-			color: #8B8386;
-			}
-			
-			.linha_divisao_noticia {
-			background-color: #FFD700;
-			width: 685px;
-			height: 1px;
-			text-align:center;
-			margin-left:5px;
-			}	
-			
-			.titulo_textos_internos {
-			width:;
-			height: 35px ;
-			background-color: ;
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 18px;
-			font-weight: bold;
-			color: #000333;
-			padding-top: 20px;
-			margin-left: 8px;
-			text-align:left;
-			
-			}
-			
-			#textos_internos{
-			background-color: #FFFFFF;
-			width: 680px;
-			height: ;
-			margin: 8px 12px 10px 8px;
-			font-family:Arial, Helvetica, sans-serif;
-			font-size:14px;
-			text-align:justify;
-			}
-	
-
-			.noticia_interna{
-			background-color: #FFFFFF;
-			width: 670px;
-			height: auto;	
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 14px;
-			margin-left: 25px;
-			text-align:justify;
-			}		
-
-				.comentarios{
-				background-color: #FFFFFF;
-				width: 670px;
-				height: auto;	
-				font-family: Arial, Helvetica, sans-serif;
-				font-size: 14px;
-				margin-left: 25px;
-				padding-top: 20px;
-				text-align:justify;
-				float: left;
-				}		
-
-				#maisnoticias_interna{
-				background-color: #FFFFFF;
-				width: 670px;
-				height: ;	
-				font-family: Arial, Helvetica, sans-serif;
-				font-size: 12px;
-				margin-left: 15px;
-				padding-top: 20px;
-				float: left;
-				}	
-
-				#corpo_noticia {
-				background-color: #FFFFFF;
-				}
-
-				#corpo_fotos {
-				background-color: #FFF333;
-				float:right;
-				}
 
 	#corpo_direito {
 	background-color: #6495ED;
@@ -327,12 +171,13 @@ text-align:center;
 
 	#menu li a {
 	background-color: #2B6088;
-	height:28px;
+	height:18px;
 	display:block;
 	padding: 3px 5px 0 5px;
-	margin: -14px 20px 0 0;
+	margin: -8px 20px 0 0;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
+	font-size: 12px;
 	text-decoration: none;
 	color: #FFF;
 	
