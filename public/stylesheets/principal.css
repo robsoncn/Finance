@@ -97,7 +97,7 @@ body {
 	#quadro_corpo {
 	background-color: #FFFFFF;
 	width: 1000px;
-	min-height: 280px;
+	min-height: 50px;
 	
 	overflow: hidden; 
 	}
