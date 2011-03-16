@@ -21,6 +21,7 @@ Finance::Application.routes.draw do
 	match "profile", :to => "users#show", :as => "profile"
 	match "logout", :to => "sessions#destroy", :as => "logout"
 	match "login", :to => "sessions#new", :as => "login"
+	match "admin", :to => "users#admin", :as => "admin"
 
 	resources :users
 

@@ -10,9 +10,18 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
-    when /the new recebimentos page/
-      new_recebimentos_path
+    when /the new categoria_do_recebimentos page/
+      new_categoria_do_recebimentos_path
 
+    when /the new forma_do_recebimentos page/
+      new_forma_do_recebimentos_path
+
+    when /the new tipo_de_recebimentos page/
+      new_tipo_de_recebimentos_path
+
+    when /the new recebimentos page/
+      new_recebimento_path
+      
     when /the new users page/
       new_users_path
 

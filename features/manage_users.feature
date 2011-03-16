@@ -46,11 +46,9 @@ Feature: Manage users
 			And I fill in "Password confirmation" with "1234"
 			And I press "Create User"
 			Then I should see "1 error prohibited this registro from being saved: Password doesn't match confirmation"
-			
-			
+						
 			Scenario: Login error
 			Given I am on the new session page
-			
 			And I fill in "Email" with "Truke@khronus.com.br"
 			And I fill in "Password" with "1342"
 			And I press "login"
@@ -60,8 +58,7 @@ Feature: Manage users
     Scenario: Edit an user 
     	Given I am logged in user
     	And I am on the profile page
-    
-    	When I follow "Edit"
+       	When I follow "Edit"
      	And I fill in "Nome" with "Chuck Norris"
     	And I fill in "Email" with "chucknorris@gmail.com"
     	And I fill in "Password" with "123456"

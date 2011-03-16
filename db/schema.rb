@@ -10,17 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20110310201919) do
+ActiveRecord::Schema.define(:version => 20110310205702) do
 
   create_table "categoria_do_pagamentos", :force => true do |t|
     t.string   "nome_da_categoria"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-=======
-ActiveRecord::Schema.define(:version => 20110310200715) do
->>>>>>> f09fc5cc7ff8c5541a58bde7bab139e6966c1407
 
   create_table "categoria_do_recebimentos", :force => true do |t|
     t.string   "nome_da_categoria"
@@ -36,7 +32,6 @@ ActiveRecord::Schema.define(:version => 20110310200715) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
-    t.integer  "recebimento_id"
   end
 
   create_table "metodo_de_pagamentos", :force => true do |t|
@@ -54,6 +49,34 @@ ActiveRecord::Schema.define(:version => 20110310200715) do
     t.integer  "tipo_do_pagamento_id"
     t.integer  "metodo_de_pagamento_id"
     t.integer  "categoria_do_pagamento_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "payament_categories", :force => true do |t|
+    t.string   "nome_da_categoria"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "payament_methods", :force => true do |t|
+    t.string   "nome_do_metodo"
+    t.string   "descricao_do_metodo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "payament_types", :force => true do |t|
+    t.string   "nome_do_tipo"
+    t.string   "descricao_do_tipo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "payaments", :force => true do |t|
+    t.date     "data_do_pagamento"
+    t.decimal  "valor_do_pagamento",     :precision => 10, :scale => 0
+    t.string   "descricao_do_pagamento"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,3 +1,8 @@
+Then /^"([^"]*)" should be selected for "([^"]*)"$/ do |value, field|
+  field_labeled(field).node.search(".//option[@selected = 'selected']").inner_html.should =~ /#{value}/
+end
+
+
 Given /^the following recebimentos:$/ do |recebimentos|
   Recebimentos.create!(recebimentos.hashes)
 end
@@ -9,6 +14,9 @@ When /^I delete the (\d+)(?:st|nd|rd|th) recebimentos$/ do |pos|
   end
 end
 
+
 Then /^I should see the following recebimentos:$/ do |expected_recebimentos_table|
   expected_recebimentos_table.diff!(tableish('table tr', 'td,th'))
 end
+
+
