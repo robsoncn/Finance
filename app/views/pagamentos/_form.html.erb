@@ -39,7 +39,25 @@
     <%= f.label :categoria_do_pagamento %><br />
     <%= f.text_field :categoria_do_pagamento %>
   </div>
+  <div class="field">
+    <%= f.label :tipo %><br />
+    <%= f.select :tipo_do_pagamento_id, @tipo_do_pagamentos.collect{|t| [t.nome_do_tipo, t.id] }  %>
+  </div>
+  <div class="field">
+    <%= f.label :forma %><br />
+  	<%= f.select :metodo_de_pagamento_id, @metodo_de_pagamentos.collect{|c| [c.nome_da_metodo, c.id] }  %>
+  </div>
+  <div class="field">
+    <%= f.label :categoria%><br />
+    <%= f.select :categoria_do_pagamento_id, @categoria_do_pagamentos.collect{|b| [b.nome_da_categoria, b.id] }  %>
+  </div>
+ <!--  <div class="field">
+    <%= f.label :categoria_do_pagamento_id %><br />
+    <%= f.text_field :categoria_do_pagamento_id %>
+
+  </div> --><br/>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+

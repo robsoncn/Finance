@@ -26,7 +26,7 @@
 			<ul>
 			<li><%= link_to 'Recebimentos', recebimentos_path  %>
 				<ul>
-				<li><%= link_to 'Novo Recebimento', recebimentos_path  %></li>
+				<li><%= link_to 'Novo Recebimento', new_recebimento_path  %></li>
 				<li><%= link_to 'Cadastrar Tipo', tipo_de_recebimentos_path  %></li>
 				<li><%= link_to 'Cadastrar Forma', forma_de_recebimentos_path  %></li>
 				<li><%= link_to 'Cadastrar Categoria', categoria_do_recebimentos_path  %></li>
@@ -34,6 +34,12 @@
 			</li>
 			<li>
 				<%= link_to 'Pagamentos', pagamentos_path  %>
+				<ul>
+				<li><%= link_to 'Novo Pagamento', new_pagamento_path  %></li>
+				<li><%= link_to 'Cadastrar Tipo', new_tipo_do_pagamento_path  %></li>
+				<li><%= link_to 'Cadastrar Método', metodo_de_pagamentos_path  %></li>
+				<li><%= link_to 'Cadastrar Categoria', categoria_do_pagamentos_path  %></li>
+				</ul>
 			</li>
 			<li>
 				<%= link_to 'Perfil', profile_path  %>
