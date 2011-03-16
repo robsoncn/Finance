@@ -10,6 +10,9 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
+    when /the new pagamentos page/
+      new_pagamentos_path
+
     when /the new recebimentos page/
       new_recebimentos_path
 
