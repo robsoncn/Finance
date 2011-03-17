@@ -10,19 +10,19 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
-<<<<<<< HEAD
+
     when /the new pagamentos page/
       new_pagamentos_path
 
     when /the new recebimentos page/
       new_recebimentos_path
-=======
+
     when /the new categoria_do_recebimentos page/
       new_categoria_do_recebimentos_path
 
     when /the new forma_do_recebimentos page/
       new_forma_do_recebimentos_path
->>>>>>> 5089436a14802a7e5dcc10b0fad9118965b046a4
+
 
     when /the new tipo_de_recebimentos page/
       new_tipo_de_recebimentos_path
