@@ -1,45 +1,24 @@
 Feature: Manage pagamentos
-  In order to [goal]
-  [stakeholder]
-  wants [behaviour]
-  
-  Scenario: Register new pagamentos
-    Given I am on the new pagamentos page
-    And I press "Create"
+    In order to avoid errors
+    As an a visitor
+    I want test some scenarios
 
-  # Rails generates Delete links that use Javascript to pop up a confirmation
-  # dialog and then do a HTTP POST request (emulated DELETE request).
-  #
-  # Capybara must use Culerity/Celerity or Selenium2 (webdriver) when pages rely
-  # on Javascript events. Only Culerity/Celerity supports clicking on confirmation
-  # dialogs.
-  #
-  # Since Culerity/Celerity and Selenium2 has some overhead, Cucumber-Rails will
-  # detect the presence of Javascript behind Delete links and issue a DELETE request 
-  # instead of a GET request.
-  #
-  # You can turn this emulation off by tagging your scenario with @no-js-emulation.
-  # Turning on browser testing with @selenium, @culerity, @celerity or @javascript
-  # will also turn off the emulation. (See the Capybara documentation for 
-  # details about those tags). If any of the browser tags are present, Cucumber-Rails
-  # will also turn off transactions and clean the database with DatabaseCleaner 
-  # after the scenario has finished. This is to prevent data from leaking into 
-  # the next scenario.
-  #
-  # Another way to avoid Cucumber-Rails' javascript emulation without using any
-  # of the tags above is to modify your views to use <button> instead. You can
-  # see how in http://github.com/jnicklas/capybara/issues#issue/12
-  #
-  Scenario: Delete pagamentos
-    Given the following pagamentos:
-      ||
-      ||
-      ||
-      ||
-      ||
-    When I delete the 3rd pagamentos
-    Then I should see the following pagamentos:
-      ||
-      ||
-      ||
-      ||
+
+    Scenario: Create new pagamentos
+   		Given I am logged in user
+
+        When I am on the new pagamentos page
+		And I select "2004" from "pagamentos_data_pagamento_1i"
+		And I select "March" from "pagamento_data_pagamento_2i"
+		And I select "17" from "pagamento_data_pagamento_3i"
+        And I fill in "pagamento_valor_pagamento" with "12,00"
+        And I fill in "pagamento_descricao_pagamento" with "Teste de descricao"
+        Given the following pagamento_tipo_de_pagamento exist
+        | Boleto  |
+
+        And I select "Boleto" from "pagamento_tipo_de_pagamento"
+        And I select "Parcelado" from "pagamento_metodo_de_pagamento_id"
+		And I select "Banco" from "pagamento_categoria_do_pagamento_id"
+	    And I press "Create pagamento"
+		Then I should see "pagamento was successfully created."
+
