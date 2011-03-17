@@ -10,7 +10,7 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
-<<<<<<< HEAD
+
     when /the new categoria_do_pagamentos page/
       new_categoria_do_pagamentos_path
 
@@ -22,8 +22,8 @@ module NavigationHelpers
 
     when /the new tipo_do_pagamentos page/
       new_tipo_do_pagamentos_path
-=======
->>>>>>> 08e96cab80a67fb08e7b83e7d06ccf2441c6f8b3
+
+
 
     when /the new pagamentos page/
       new_pagamentos_path
