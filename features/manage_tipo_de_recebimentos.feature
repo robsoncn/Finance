@@ -14,7 +14,7 @@ Feature: Manage tipo_de_recebimentos
 		
 		Scenario: Edit tipo_de_recebimentos
 			And the following tipo_de_recebimentos exists:
-			| nome_do_tipo  | descricao_do_tipo|
+			| nome_do_tipo  | descricao_do_tipo |
 			| Salário       | Teste  |
 			Given I am logged in user
 			When I am on the tipo_de_recebimentos page

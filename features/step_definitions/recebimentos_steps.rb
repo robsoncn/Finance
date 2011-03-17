@@ -1,3 +1,8 @@
+Given /^The System setup is prepared$/ do
+	TipoDeRecebimento.create!(:nome_do_tipo => "Salário")
+	TipoDeRecebimento.create!(:nome_do_tipo => "Cheque")
+end
+
 Then /^"([^"]*)" should be selected for "([^"]*)"$/ do |value, field|
   field_labeled(field).node.search(".//option[@selected = 'selected']").inner_html.should =~ /#{value}/
 end

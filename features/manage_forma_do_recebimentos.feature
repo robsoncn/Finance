@@ -12,3 +12,23 @@ Feature: Manage forma_do_recebimentos
     And I press "Create Forma de recebimento"
 	Then I should see "Forma de recebimento was successfully created."
 
+		Scenario: Edit forma_do_recebimentos
+			And the following forma_de_recebimentos exists:
+			| nome_da_forma  | descricao_da_forma |
+			| Dinheiro      | Dinheiro |
+			Given I am logged in user
+			When I am on the forma_de_recebimentos page
+			And I follow "Edit"
+			And I fill in "forma_de_recebimento_nome_da_forma" with "Dinheiro2"
+			And I fill in "forma_de_recebimento_descricao_da_forma" with "Dinheiro2"
+			And I press "Update Forma de recebimento"
+			Then I should see "Forma de recebimento was successfully updated."
+			
+		Scenario: Destroy forma_do_recebimentos
+			And the following forma_de_recebimentos exists:
+			| nome_da_forma  | descricao_da_forma |
+			| Dinheiro      | Dinheiro |
+			 When I am on the forma_de_recebimentos page
+		And I follow "Destroy"
+		
+
