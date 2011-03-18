@@ -1,15 +1,17 @@
 <%= form_for(@recebimento) do |f| %>
-  <% if @recebimento.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@recebimento.errors.count, "error") %> prohibited this recebimento from being saved:</h2>
+<div class lista_especialidades 
+	<% if @recebimento.errors.any? %>
+	<div id="error_explanation">
+	   
+	<h2><%= pluralize(@recebimento.errors.count, "error") %> Não foi possível salvar esse recebimento:</h2>
 
-      <ul>
-      <% @recebimento.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+		<ul>
+		<% @recebimento.errors.full_messages.each do |msg| %>
+		<li><%= msg %></li>
+		<% end %>
+		</ul>
+	</div>
+	<% end %>
 
   <div class="field">
     <%= f.label :data %><br />

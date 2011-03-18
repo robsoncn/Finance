@@ -2,10 +2,73 @@ body {
 	background-color: #FFFFFF;
 	text-align:center;
 	margin: 0px;	
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 12px;
 }
 	a:link {color: #000333}
 	a:visited {color: #000333}
 	a:hover {color: #FFD700}
+	
+	a img {
+  border: none;
+}
+
+a {
+  color: #0000FF;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+#container {
+  width: 75%;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+   border: 2px solid red;
+   text-align: center;
+}
+
+#error_explanation {
+  width: 700px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+   text-align: center;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+
+#error_explanation ul li {
+width: 700px;
+  font-size: 12px;
+  list-style: square;
+}
 
 .quadro_principal {
 	background-color: #FFFFFF;
@@ -220,6 +283,8 @@ text-align:center;
 	 margin-left:2px;
 	}
 	
+/* Tabelas */
+
 /* Tabelas */
 
 table, td{

@@ -2,25 +2,31 @@
 
 <h1>Resumo do Recebimento</h1>
 
-<table>
-	<tr>
-	  <th>Data</th> <td><%= @recebimento.data_recebimento %></td>
-	</tr>
-	<tr>
-	  <th>Valor</th> <td><%= @recebimento.valor_recebimento %></td>
-	</tr>  
-	<tr>  
-	  <th>Descrição</th> <td><%= @recebimento.descricao_recebimento%></td>
-	</tr>  
-	<tr>  
-	  <th>Tipo</th>  <td><%= @recebimento.tipo_de_recebimento.nome_do_tipo %></td>
-	</tr>  
-	<tr>
-	  <th>Forma</th> <td><%= @recebimento.forma_de_recebimento.nome_da_forma %></td>
-	</tr>  
-  	<tr>
-  	  <th>Categoria</th><td><%= @recebimento.categoria_do_recebimento.nome_da_categoria %></td>
-  	</tr>  
+<table width="50%">
+
+<th>Data</th>
+<th>Valor</th>
+<th>Descrição</th>
+<th>Tipo</th>
+<th>Forma</th> 
+<th>Categoria</th>
+
+<tr>
+
+
+<td><%= @recebimento.data_recebimento %></td>
+
+<td><%= @recebimento.valor_recebimento %></td>
+
+<td><%= @recebimento.descricao_recebimento%></td>
+
+<td><%= @recebimento.tipo_de_recebimento.nome_do_tipo %></td>
+
+<td><%= @recebimento.forma_de_recebimento.nome_da_forma %></td>
+
+<td><%= @recebimento.categoria_do_recebimento.nome_da_categoria %></td>
+</tr>
+
 </table>
 
 
