@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110310205702) do
+ActiveRecord::Schema.define(:version => 20110321181729) do
 
   create_table "categoria_do_pagamentos", :force => true do |t|
     t.string   "nome_da_categoria"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20110310205702) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.integer  "recebimento_id"
   end
 
   create_table "metodo_de_pagamentos", :force => true do |t|
@@ -83,7 +84,6 @@ ActiveRecord::Schema.define(:version => 20110310205702) do
 
   create_table "recebimentos", :force => true do |t|
     t.date     "data_recebimento"
-    t.decimal  "valor_recebimento",           :precision => 10, :scale => 0
     t.string   "descricao_recebimento"
     t.integer  "usuario_id"
     t.integer  "tipo_de_recebimento_id"
@@ -91,6 +91,7 @@ ActiveRecord::Schema.define(:version => 20110310205702) do
     t.integer  "categoria_do_recebimento_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "valor_recebimento",           :precision => 8, :scale => 2, :default => 0.0
   end
 
   create_table "tipo_de_recebimentos", :force => true do |t|

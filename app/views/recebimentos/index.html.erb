@@ -21,9 +21,17 @@
     <td><%= link_to 'Edit', edit_recebimento_path(recebimento) %></td>
     <td><%= link_to 'Destroy', recebimento, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
+  
 <% end %>
-</table>
 
+	<tr>
+		<td><b>Valor Acumulado</b></td>  
+		<% @total = Recebimento.sum (:valor_recebimento) %>
+		<td align='right'><b>   <%=h @total %> </b></td>  
+	
+		
+	</tr>
+</table>
 <br />
 
 <%= link_to 'New Recebimento', new_recebimento_path %>

@@ -4,4 +4,5 @@ class CategoriaDoRecebimento < ActiveRecord::Base
 	
 	validates :nome_da_categoria, :presence => true
 	validates :descricao_da_categoria, :presence => true
+	
 end
