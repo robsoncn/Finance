@@ -1,6 +1,6 @@
 Given /^The System setup is prepared$/ do
-	TipoDeRecebimento.create!(:nome_do_tipo => "Salário")
-	TipoDeRecebimento.create!(:nome_do_tipo => "Cheque")
+	TipoDeRecebimento.create!(:nome_do_tipo => "Salário", :descricao_do_tipo => "Salário do Mês")
+	
 end
 
 Then /^"([^"]*)" should be selected for "([^"]*)"$/ do |value, field|

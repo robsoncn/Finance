@@ -18,7 +18,7 @@ Feature: Manage users
 			And I fill in "Password" with "123456"
 			And I fill in "Password confirmation" with "123456"
 			And I press "Create User"
-			Then I should see "1 error prohibited this registro from being saved: Nome is too short (minimum is 4 characters)"
+			Then I should see "1 error prohibited this registro from being saved: Nome é muito curto (mínimo: 4 caracteres)"
 			
 			Scenario: Create an user error email
 			Given I am on the new user page
@@ -27,7 +27,7 @@ Feature: Manage users
 			And I fill in "Password" with "123456"
 			And I fill in "Password confirmation" with "123456"
 			And I press "Create User"
-			Then I should see "1 error prohibited this registro from being saved: Email is invalid"
+			Then I should see "1 error prohibited this registro from being saved: Email não é válido"
 			
 			Scenario: Create an user error password
 			Given I am on the new user page
@@ -36,7 +36,7 @@ Feature: Manage users
 			And I fill in "Password" with "12"
 			And I fill in "Password confirmation" with ""
 			And I press "Create User"
-			Then I should see "2 errors prohibited this registro from being saved: Password is too short (minimum is 6 characters) Password doesn't match confirmation"
+			Then I should see "2 errors prohibited this registro from being saved: Password é muito curto (mínimo: 6 caracteres) Password não está de acordo com a confirmação"
 			
 			Scenario: Create an user error password confirmation
 			Given I am on the new user page
@@ -45,7 +45,7 @@ Feature: Manage users
 			And I fill in "Password" with "123456"
 			And I fill in "Password confirmation" with "1234"
 			And I press "Create User"
-			Then I should see "1 error prohibited this registro from being saved: Password doesn't match confirmation"
+			Then I should see "1 error prohibited this registro from being saved: Password não está de acordo com a confirmação"
 						
 			Scenario: Login error
 			Given I am on the new session page

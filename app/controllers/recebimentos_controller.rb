@@ -3,6 +3,18 @@ class RecebimentosController < ApplicationController
   # GET /recebimentos.xml
   before_filter :collection, :only => [:new, :edit, :create, :update]
  
+	def price_s  
+		result = self.price.to_s  
+		result = "0" * (3 - result.size) + result  
+		result[-2, 0] = ","  
+		result  
+	end  
+
+	def price_s=(valor_recebimento)  
+		self.price = valor_recebimento.to_s.gsub(/[,\.]/, "")  
+	end  
+
+ 
   def index
     @recebimentos = Recebimento.all
 
