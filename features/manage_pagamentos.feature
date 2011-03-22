@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 Feature: Manage pagamentos
     In order to avoid errors
@@ -21,3 +22,5 @@ Feature: Manage pagamentos
 	    And I press "Create Pagamento"
 		Then I should see "Pagamento was successfully created."
 
+=======
+>>>>>>> 5ee4e7bbe6a2022ca3374794192671c235a72578

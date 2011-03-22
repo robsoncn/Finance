@@ -3,6 +3,7 @@ class RecebimentosController < ApplicationController
   # GET /recebimentos.xml
   before_filter :collection, :only => [:new, :edit, :create, :update]
  
+	
   def index
     @recebimentos = Recebimento.all
 

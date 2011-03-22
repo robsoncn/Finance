@@ -1,6 +1,11 @@
 Given /^The System setup is prepared$/ do
+<<<<<<< HEAD
 	TipoDeRecebimento.create!(:nome_do_tipo => "Salário")
 	TipoDeRecebimento.create!(:nome_do_tipo => "Cheque")
+=======
+	TipoDeRecebimento.create!(:nome_do_tipo => "Salário", :descricao_do_tipo => "Salário do Mês")
+	
+>>>>>>> 5ee4e7bbe6a2022ca3374794192671c235a72578
 end
 
 Then /^"([^"]*)" should be selected for "([^"]*)"$/ do |value, field|

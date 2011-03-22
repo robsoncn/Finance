@@ -13,7 +13,7 @@ Feature: Manage recebimentos
    		When I am on the recebimentos page
    		And I follow "New Recebimento"   		
 		And I select "2006" from "recebimento_data_recebimento_1i"
-		And I select "March" from "recebimento_data_recebimento_2i" 
+		And I select "Março" from "recebimento_data_recebimento_2i" 
 		And I select "13" from "recebimento_data_recebimento_3i"            
         And I fill in "recebimento_valor_recebimento" with "12,00"
         And I fill in "recebimento_descricao_recebimento" with "Teste de descricao"

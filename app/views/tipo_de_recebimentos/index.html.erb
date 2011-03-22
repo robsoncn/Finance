@@ -3,22 +3,24 @@
 <table>
   <tr>
     <th>Nome do tipo</th>
-    <th>Descricao do tipo</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Descrição do tipo</th>
+
   </tr>
 
 <% @tipo_de_recebimentos.each do |tipo_de_recebimento| %>
   <tr>
     <td><%= tipo_de_recebimento.nome_do_tipo %></td>
     <td><%= tipo_de_recebimento.descricao_do_tipo %></td>
+    
+    
     <td><%= link_to 'Show', tipo_de_recebimento %></td>
     <td><%= link_to 'Edit', edit_tipo_de_recebimento_path(tipo_de_recebimento) %></td>
     <td><%= link_to 'Destroy', tipo_de_recebimento, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
+  
 <% end %>
 </table>
+
 
 <br />
 

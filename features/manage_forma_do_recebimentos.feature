@@ -49,6 +49,7 @@ Feature: Manage forma_do_recebimentos
 			 When I am on the forma_de_recebimentos page
 		And I follow "Destroy"
 		
+<<<<<<< HEAD
 
 		Scenario: Edit forma_do_recebimentos
 			And the following forma_de_recebimentos exists:
@@ -69,4 +70,6 @@ Feature: Manage forma_do_recebimentos
 			 When I am on the forma_de_recebimentos page
 		And I follow "Destroy"
 		
+=======
+>>>>>>> 5ee4e7bbe6a2022ca3374794192671c235a72578
 

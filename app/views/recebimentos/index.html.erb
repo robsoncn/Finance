@@ -12,7 +12,7 @@
 
 <% @recebimentos.each do |recebimento| %>
   <tr>
-    <td><%= recebimento.data_recebimento %></td>
+    <td><%= l recebimento.data_recebimento %></td>
     <td><%= recebimento.valor_recebimento %></td>
     <td><%= recebimento.tipo_de_recebimento.nome_do_tipo %></td>
     <td><%= recebimento.forma_de_recebimento.nome_da_forma %></td>
@@ -21,9 +21,17 @@
     <td><%= link_to 'Edit', edit_recebimento_path(recebimento) %></td>
     <td><%= link_to 'Destroy', recebimento, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
+  
 <% end %>
-</table>
 
+	<tr>
+		<td><b>Valor Acumulado</b></td>  
+		<% @total = Recebimento.sum (:valor_recebimento) %>
+		<td align='right'><b>   <%=h @total %> </b></td>  
+	
+		
+	</tr>
+</table>
 <br />
 
 <%= link_to 'New Recebimento', new_recebimento_path %>
