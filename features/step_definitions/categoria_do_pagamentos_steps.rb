@@ -9,6 +9,13 @@ When /^I delete the (\d+)(?:st|nd|rd|th) categoria_do_pagamentos$/ do |pos|
   end
 end
 
+Then /^the following categoria_do_pagamentos exists:$/ do |table|
+  table.hashes.each do |hash|
+   t = CategoriaDoPagamento.create!(:nome_da_categoria => hash[:nome_da_categoria] )
+	end
+end
+
 Then /^I should see the following categoria_do_pagamentos:$/ do |expected_categoria_do_pagamentos_table|
   expected_categoria_do_pagamentos_table.diff!(tableish('table tr', 'td,th'))
 end
+

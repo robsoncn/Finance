@@ -1,5 +1,7 @@
 <%= form_for(@user, :html => { :multipart => true }) do |f| %>
 
+	
+	
 	<% if @user.errors.any? %>
 
 		<%= pluralize(@user.errors.count, "error") %> prohibited this registro from being saved:

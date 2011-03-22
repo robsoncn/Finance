@@ -2,27 +2,21 @@
 
 <table>
   <tr>
-    <th>Data do pagamento</th>
-    <th>Valor do pagamento</th>
-    <th>Descricao do pagamento</th>
-    <th>User</th>
-    <th>Tipo do pagamento</th>
-    <th>Metodo de pagamento</th>
-    <th>Categoria do pagamento</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Data</th>
+    <th>Valor</th>
+    <th>Descricao</th>
+    <th>Tipo</th>
+    <th>Metodo</th>
+    <th>Categoria</th>
   </tr>
 
 <% @pagamentos.each do |pagamento| %>
   <tr>
     <td><%= pagamento.data_do_pagamento %></td>
     <td><%= pagamento.valor_do_pagamento %></td>
-    <td><%= pagamento.descricao_do_pagamento %></td>
-    <td><%= pagamento.user %></td>
-    <td><%= pagamento.tipo_do_pagamento %></td>
-    <td><%= pagamento.metodo_de_pagamento %></td>
-    <td><%= pagamento.categoria_do_pagamento %></td>
+    <td><%= pagamento.tipo_do_pagamento.nome_do_tipo %></td>
+    <td><%= pagamento.metodo_de_pagamento.nome_do_metodo %></td>
+    <td><%= pagamento.categoria_do_pagamento.nome_da_categoria %></td>
     <td><%= link_to 'Show', pagamento %></td>
     <td><%= link_to 'Edit', edit_pagamento_path(pagamento) %></td>
     <td><%= link_to 'Destroy', pagamento, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -33,3 +27,4 @@
 <br />
 
 <%= link_to 'New Pagamento', new_pagamento_path %>
+

@@ -10,19 +10,14 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
-
-    when /the new categoria_do_pagamentos page/
-      new_categoria_do_pagamentos_path
-
-    when /the new categoria_de_pagamentos page/
-      new_categoria_de_pagamentos_path
+    when /the new tipo_do_pagamentos page/
+      new_tipo_do_pagamentos_path
 
     when /the new metodo_de_pagamentos page/
       new_metodo_de_pagamentos_path
 
-    when /the new tipo_do_pagamentos page/
-      new_tipo_do_pagamentos_path
-
+    when /the new categoria_do_pagamentos page/
+      new_categoria_do_pagamentos_path
 
 
     when /the new pagamentos page/
@@ -43,7 +38,7 @@ module NavigationHelpers
 
     when /the new recebimentos page/
       new_recebimento_path
-
+      
     when /the new users page/
       new_users_path
 
@@ -70,4 +65,3 @@ module NavigationHelpers
 end
 
 World(NavigationHelpers)
-

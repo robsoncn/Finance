@@ -1,3 +1,8 @@
+Then /^"([^"]*)" should be selected for "([^"]*)"$/ do |value, field|
+  field_labeled(field).node.search(".//option[@selected = 'selected']").inner_html.should =~ /#{value}/
+end
+
+
 Given /^the following pagamentos:$/ do |pagamentos|
   Pagamentos.create!(pagamentos.hashes)
 end
@@ -12,3 +17,4 @@ end
 Then /^I should see the following pagamentos:$/ do |expected_pagamentos_table|
   expected_pagamentos_table.diff!(tableish('table tr', 'td,th'))
 end
+

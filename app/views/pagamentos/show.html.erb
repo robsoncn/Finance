@@ -1,40 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Data do pagamento:</b>
-  <%= @pagamento.data_do_pagamento %>
-</p>
+<h1>Resumo de Pagamentos</h1>
 
-<p>
-  <b>Valor do pagamento:</b>
-  <%= @pagamento.valor_do_pagamento %>
-</p>
-
-<p>
-  <b>Descricao do pagamento:</b>
-  <%= @pagamento.descricao_do_pagamento %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%= @pagamento.user %>
-</p>
-
-<p>
-  <b>Tipo do pagamento:</b>
-  <%= @pagamento.tipo_do_pagamento %>
-</p>
-
-<p>
-  <b>Metodo de pagamento:</b>
-  <%= @pagamento.metodo_de_pagamento %>
-</p>
-
-<p>
-  <b>Categoria do pagamento:</b>
-  <%= @pagamento.categoria_do_pagamento %>
-</p>
-
+<table>
+	<tr>
+	  <th>Data</th> <td><%= @pagamento.data_pagamento %></td>
+	</tr>
+	<tr>
+	  <th>Valor</th> <td><%= @pagamento.valor_pagamento %></td>
+	</tr>
+	<tr>
+	  <th>Descrição</th> <td><%= @pagamento.descricao_pagamento%></td>
+	</tr>
+	<tr>
+	  <th>Tipo</th>  <td><%= @pagamento.tipo_de_pagamento.nome_do_tipo %></td>
+	</tr>
+	<tr>
+	  <th>Forma</th> <td><%= @pagamento.forma_de_pagamento.nome_da_forma %></td>
+	</tr>
+  	<tr>
+  	  <th>Categoria</th><td><%= @pagamento.categoria_do_pagamento.nome_da_categoria %></td>
+  	</tr>
+</table>
 
 <%= link_to 'Edit', edit_pagamento_path(@pagamento) %> |
 <%= link_to 'Back', pagamentos_path %>
+
