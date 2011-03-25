@@ -1,35 +1,49 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Resumo do Recebimento</h1>
+<% content_for :tabela do %>
 
-<table width="50%">
+<div class="block"> 
 
-<th>Data</th>
-<th>Valor</th>
-<th>Descrição</th>
-<th>Tipo</th>
-<th>Forma</th> 
-<th>Categoria</th>
+	<div class="block_head">
+			<div class="bheadl"></div>
+			<div class="bheadr"></div>
+			<h1>Resumo do Recebimento</h1>
+	</div>	
+	
+	<div class="block_content">
+	
+		<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
 
-<tr>
+			<th>Data</th>
+			<th>Valor</th>
+			<th>Descrição</th>
+			<th>Tipo</th>
+			<th>Forma</th> 
+			<th>Categoria</th>
 
+			<td><%= @recebimento.data_recebimento %></td>
+			<td><%= @recebimento.valor_recebimento %></td>
+			<td><%= @recebimento.descricao_recebimento%></td>
+			<td><%= @recebimento.tipo_de_recebimento.nome_do_tipo %></td>
+			<td><%= @recebimento.forma_de_recebimento.nome_da_forma %></td>
+			<td><%= @recebimento.categoria_do_recebimento.nome_da_categoria %></td>
+		</table>
 
-<td><%= @recebimento.data_recebimento %></td>
+		<div class="tableactions">
+			<%= link_to 'Edit', edit_recebimento_path(@recebimento) %> |
+			<%= link_to 'Back', recebimentos_path %>
+		</div>
 
-<td><%= @recebimento.valor_recebimento %></td>
+		<div class="pagination right">
 
-<td><%= @recebimento.descricao_recebimento%></td>
+		</div>
 
-<td><%= @recebimento.tipo_de_recebimento.nome_do_tipo %></td>
+	</div>
 
-<td><%= @recebimento.forma_de_recebimento.nome_da_forma %></td>
+	<div class="bendl"></div>
+	<div class="bendr"></div>	
+	
+</div>
 
-<td><%= @recebimento.categoria_do_recebimento.nome_da_categoria %></td>
-</tr>
+<% end %> 
 
-</table>
-
-
-
-<%= link_to 'Edit', edit_recebimento_path(@recebimento) %> |
-<%= link_to 'Back', recebimentos_path %>

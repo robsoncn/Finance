@@ -1,33 +1,33 @@
 <%= form_for(@recebimento) do |f| %>
-<div class lista_especialidades 
+	
 	<% if @recebimento.errors.any? %>
 	<div id="error_explanation">
-	   
+
 	<h2><%= pluralize(@recebimento.errors.count, "error") %> Não foi possível salvar esse recebimento:</h2>
 
-		<ul>
-		<% @recebimento.errors.full_messages.each do |msg| %>
+	<ul>
+	<% @recebimento.errors.full_messages.each do |msg| %>
 		<li><%= msg %></li>
-		<% end %>
-		</ul>
-	</div>
 	<% end %>
+	</ul>
+</div>
+<% end %>
 
   <div class="field">
     <%= f.label :data %><br />
-    <%= f.date_select :data_recebimento %>
+    <%= f.text_field :data_recebimento, :class => "text date_picker"%>
   </div><br/>
   <div class="field">
     <%= f.label :valor %><br />
-    <%= f.text_field :valor_recebimento %>
+    <%= f.text_field :valor_recebimento, :class => "text small" %>
   </div><br/>
   <div class="field">
-    <%= f.label :descricao %><br />
-    <%= f.text_field :descricao_recebimento %>
-  </div><br/>
+  <%= f.label :descricao %><br />
+  <%= f.text_area :descricao_recebimento%>
+  </div>  <br/>
   <div class="field">
     <%= f.label :tipo %><br />
-    <%= f.select :tipo_de_recebimento_id, @tipo_de_recebimentos.collect{|t| [t.nome_do_tipo, t.id] }  %>
+    <%= f.select :tipo_de_recebimento_id, @tipo_de_recebimentos.collect{|t| [t.nome_do_tipo, t.id] }, :class => "styled"  %>
   </div><br/>
   <div class="field">
     <%= f.label :forma %><br />
@@ -36,8 +36,11 @@
   <div class="field">
     <%= f.label :categoria%><br />
     <%= f.select :categoria_do_recebimento_id, @categoria_do_recebimentos.collect{|b| [b.nome_da_categoria, b.id] }  %>
-
+   </div> 
   <div class="actions"><br/>
     <%= f.submit %>
   </div>
 <% end %>
+
+
+

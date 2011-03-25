@@ -1,4 +1,9 @@
-<br />
+
+<% content_for :menu do %>
+
+<% end %>
+
+<% content_for :conteudo do %>
 
 <h1>Meu Perfil</h1>
 <p>
@@ -13,3 +18,5 @@
 
 <br />
 <%= link_to 'Edit', edit_user_path(@user) %> | <%= link_to 'Apagar minha conta', @user, :confirm => "Você tem certeza?", :method => :delete  %> 
+
+<% end %>

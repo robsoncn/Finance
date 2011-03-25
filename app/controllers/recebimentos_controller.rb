@@ -5,9 +5,8 @@ class RecebimentosController < ApplicationController
  
 	
   def index
-    @recebimentos = Recebimento.all
-
-    respond_to do |format|
+  @recebimentos = Recebimento.all
+  respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @recebimentos }
     end
@@ -16,7 +15,8 @@ class RecebimentosController < ApplicationController
   # GET /recebimentos/1
   # GET /recebimentos/1.xml
   def show
-    @recebimento = Recebimento.find(params[:id])
+   @recebimento = Recebimento.find(params[:id] )
+  
 
     respond_to do |format|
       format.html # show.html.erb

@@ -1,11 +1,19 @@
-<h1>Lista de Tipos de Recebimentos</h1>
+<% content_for :tabela do %>
 
-<table>
-  <tr>
-    <th>Nome do tipo</th>
-    <th>Descrição do tipo</th>
+<div class="block"> 
 
-  </tr>
+	<div class="block_head">
+		<div class="bheadl"></div>
+		<div class="bheadr"></div>
+		<h2>Lista de Tipos de Recebimentos</h2>
+    </div>
+    
+<div class="block_content">    
+<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
+	<tr>
+		<th>Nome do tipo</th>
+		<th>Descrição do tipo</th>
+	</tr>
 
 <% @tipo_de_recebimentos.each do |tipo_de_recebimento| %>
   <tr>
@@ -21,7 +29,22 @@
 <% end %>
 </table>
 
-
-<br />
-
+<div class="tableactions">
 <%= link_to 'New Tipo de recebimento', new_tipo_de_recebimento_path %>
+</div>
+
+<div class="pagination right">
+
+</div>
+
+	
+</div>
+
+<div class="bendl"></div>
+	<div class="bendr"></div>	
+	
+	</div>
+
+<% end %> 
+
+
