@@ -1,6 +1,5 @@
 <%= form_for(@tipo_de_recebimento) do |f| %>
-  
-   <div class="field">
+
   <% if @tipo_de_recebimento.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@tipo_de_recebimento.errors.count, "error") %> prohibited this tipo_de_recebimento from being saved:</h2>
@@ -10,9 +9,9 @@
         <li><%= msg %></li>
       <% end %>
       </ul>
-    </div>
+   </div>
   <% end %>
-  </div>
+ 
 
   <div class="field">
     <%= f.label :nome_do_tipo %><br />

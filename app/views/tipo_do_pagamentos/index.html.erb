@@ -1,6 +1,15 @@
-<h1>Listing tipo_do_pagamentos</h1>
+<% content_for :tabela do %>
 
-<table>
+<div class="block"> 
+
+	<div class="block_head">
+		<div class="bheadl"></div>
+		<div class="bheadr"></div>
+	<h2>Listing tipo_do_pagamentos</h2>
+	</div>
+
+<div class="block_content">    
+<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
   <tr>
     <th>Nome do tipo</th>
     <th>Descricao do tipo</th>
@@ -20,6 +29,21 @@
 <% end %>
 </table>
 
-<br />
-
+<div class="tableactions">
 <%= link_to 'New Tipo do pagamento', new_tipo_do_pagamento_path %>
+</div>
+
+<div class="pagination right">
+
+</div>
+
+	
+</div>
+
+<div class="bendl"></div>
+	<div class="bendr"></div>	
+	
+	</div>
+
+<% end %> 
+
