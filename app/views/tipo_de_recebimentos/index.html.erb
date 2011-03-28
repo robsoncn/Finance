@@ -5,40 +5,39 @@
 	<div class="block_head">
 		<div class="bheadl"></div>
 		<div class="bheadr"></div>
-		<h2>Lista de Tipos de Recebimentos</h2>
-    </div>
+	<h2>Lista de Tipos de Recebimentos</h2>
+	</div>
     
 <div class="block_content">    
-<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
-	<tr>
-		<th>Nome do tipo</th>
-		<th>Descrição do tipo</th>
-	</tr>
+	<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
+		<tr>
+			<th>Nome do tipo</th>
+			<th>Descrição do tipo</th>
+		</tr>
 
-<% @tipo_de_recebimentos.each do |tipo_de_recebimento| %>
-  <tr>
-    <td><%= tipo_de_recebimento.nome_do_tipo %></td>
-    <td><%= tipo_de_recebimento.descricao_do_tipo %></td>
-    
-    
-    <td><%= link_to 'Show', tipo_de_recebimento %></td>
-    <td><%= link_to 'Edit', edit_tipo_de_recebimento_path(tipo_de_recebimento) %></td>
-    <td><%= link_to 'Destroy', tipo_de_recebimento, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-  
-<% end %>
-</table>
+	<% @tipo_de_recebimentos.each do |tipo_de_recebimento| %>
+		<tr>
+		  <td><%= tipo_de_recebimento.nome_do_tipo %></td>
+		  <td><%= tipo_de_recebimento.descricao_do_tipo %></td>
+		  
+		  
+		  <td><%= link_to 'Show', tipo_de_recebimento %></td>
+		  <td><%= link_to 'Edit', edit_tipo_de_recebimento_path(tipo_de_recebimento) %></td>
+		  <td><%= link_to 'Destroy', tipo_de_recebimento, :confirm => 'Are you sure?', :method => :delete %></td>
+		</tr>
+		
+	<% end %>
+	</table>
 
-<div class="tableactions">
-<%= link_to 'New Tipo de recebimento', new_tipo_de_recebimento_path %>
-</div>
+	<div class="tableactions">
+	<%= link_to 'New Tipo de recebimento', new_tipo_de_recebimento_path %>
+	</div>
 
-<div class="pagination right">
+	<div class="pagination right">
 
-</div>
+	</div>
 
-	
-</div>
+
 
 <div class="bendl"></div>
 	<div class="bendr"></div>	

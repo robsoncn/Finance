@@ -1,5 +1,25 @@
-<h1>Cadastrar Categoria de Recebimento</h1>
+<% content_for :formulario do %>
 
-<%= render 'form' %>
+<div class="block"> 
 
-<%= link_to 'Back', categoria_do_recebimentos_path %>
+	<div class="block_head">
+		<div class="bheadl"></div>
+		<div class="bheadr"></div>
+	<h2>Cadastrar Categoria de Recebimento</h2>
+	</div>
+
+	<div class="block_content">
+	<%= render 'form' %><br/>
+	<hr>
+	<p><%= link_to 'Back', categoria_do_recebimentos_path %></p>
+	</div>
+
+	<div class="bendl"></div>
+	<div class="bendr"></div>
+
+</div>    
+
+<% end %>
+
+
+

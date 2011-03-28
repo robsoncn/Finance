@@ -7,7 +7,7 @@ class Recebimento < ActiveRecord::Base
 
 
    validates :valor_recebimento, :presence => true
-   validates :valor_recebimento, :presence  => true
+      validates :valor_recebimento, :presence  => true
 
 
 

@@ -1,15 +1,46 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Nome da categoria:</b>
-  <%= @categoria_do_recebimento.nome_da_categoria %>
+<% content_for :tabela do %>
+
+<div class="block"> 
+
+	<div class="block_head">
+			<div class="bheadl"></div>
+			<div class="bheadr"></div>
+  <h2>Nome da categoria:<h2>
+  </div>	
+	
+	<div class="block_content">
+	
+		<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
+		<tr>
+			<th>Nome</th>
+			<th>Descrição</th>
+</tr>
+			
+
+ <td><%= @categoria_do_recebimento.nome_da_categoria %></td>
+ <td><%= @categoria_do_recebimento.descricao_da_categoria %></td>
+
 </p>
 
-<p>
-  <b>Descricao da categoria:</b>
-  <%= @categoria_do_recebimento.descricao_da_categoria %>
-</p>
+</table>
 
+		<div class="tableactions">
+			<%= link_to 'Edit', edit_recebimento_path(@recebimento) %> |
+			<%= link_to 'Back', recebimentos_path %>
+		</div>
 
-<%= link_to 'Edit', edit_categoria_do_recebimento_path(@categoria_do_recebimento) %> |
-<%= link_to 'Back', categoria_do_recebimentos_path %>
+		<div class="pagination right">
+
+		</div>
+
+	</div>
+
+	<div class="bendl"></div>
+	<div class="bendr"></div>	
+	
+</div>
+
+<% end %> 
+
