@@ -1,11 +1,18 @@
-<h1>Listing categoria_do_pagamentos</h1>
+<% content_for :tabela do %>
 
-<table>
+<div class="block">
+
+	<div class="block_head">
+		<div class="bheadl"></div>
+		<div class="bheadr"></div>
+		<h2>Lista de Categorias de Pagamentos</h2>
+  </div>
+
+<div class="block_content">
+<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
   <tr>
     <th>Nome da categoria</th>
-    <th></th>
-    <th></th>
-    <th></th>
+
   </tr>
 
 <% @categoria_do_pagamentos.each do |categoria_do_pagamento| %>
@@ -18,6 +25,21 @@
 <% end %>
 </table>
 
-<br />
+<div class="tableactions">
+<%= link_to 'New Categoria do Pagamento', new_categoria_do_pagamento_path %>
+</div>
 
-<%= link_to 'New Categoria do pagamento', new_categoria_do_pagamento_path %>
+<div class="pagination right">
+
+</div>
+
+
+</div>
+
+<div class="bendl"></div>
+	<div class="bendr"></div>
+
+	</div>
+
+<% end %>
+

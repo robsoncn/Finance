@@ -1,49 +1,48 @@
 <% content_for :tabela do %>
 
-<div class="block"> 
+<div class="block">
 
 	<div class="block_head">
 		<div class="bheadl"></div>
 		<div class="bheadr"></div>
-	<h2>Listing tipo_do_pagamentos</h2>
+	<h2>Lista de Tipos do Pagamentos</h2>
 	</div>
 
-<div class="block_content">    
-<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
-  <tr>
-    <th>Nome do tipo</th>
-    <th>Descricao do tipo</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="block_content">
+	<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
+		<tr>
+			<th>Nome do tipo</th>
+			<th>Descrição do tipo</th>
+		</tr>
 
-<% @tipo_do_pagamentos.each do |tipo_do_pagamento| %>
-  <tr>
-    <td><%= tipo_do_pagamento.nome_do_tipo %></td>
-    <td><%= tipo_do_pagamento.descricao_do_tipo %></td>
-    <td><%= link_to 'Show', tipo_do_pagamento %></td>
-    <td><%= link_to 'Edit', edit_tipo_do_pagamento_path(tipo_do_pagamento) %></td>
-    <td><%= link_to 'Destroy', tipo_do_pagamento, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+	<% @tipo_do_pagamentos.each do |tipo_do_pagamento| %>
+		<tr>
+		  <td><%= tipo_do_pagamento.nome_do_tipo %></td>
+		  <td><%= tipo_do_pagamento.descricao_do_tipo %></td>
 
-<div class="tableactions">
-<%= link_to 'New Tipo do pagamento', new_tipo_do_pagamento_path %>
-</div>
 
-<div class="pagination right">
+		  <td><%= link_to 'Show', tipo_do_pagamento %></td>
+		  <td><%= link_to 'Edit', edit_tipo_do_pagamento_path(tipo_do_pagamento) %></td>
+		  <td><%= link_to 'Destroy', tipo_do_pagamento, :confirm => 'Are you sure?', :method => :delete %></td>
+		</tr>
 
-</div>
+	<% end %>
+	</table>
 
-	
-</div>
+	<div class="tableactions">
+	<%= link_to 'New Tipo do Pagamento', new_tipo_do_pagamento_path %>
+	</div>
+
+	<div class="pagination right">
+
+	</div>
+
+
 
 <div class="bendl"></div>
-	<div class="bendr"></div>	
-	
+	<div class="bendr"></div>
+
 	</div>
 
-<% end %> 
+<% end %>
 

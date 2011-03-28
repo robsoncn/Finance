@@ -1,12 +1,19 @@
-<h1>Listing metodo_de_pagamentos</h1>
+<% content_for :tabela do %>
 
-<table>
+<div class="block">
+
+	<div class="block_head">
+		<div class="bheadl"></div>
+		<div class="bheadr"></div>
+<h2>Lista de Metodos de Pagamentos</h2>
+ </div>
+
+<div class="block_content">
+<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
   <tr>
-    <th>Nome do metodo</th>
-    <th>Descricao do metodo</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Nome do Metodo</th>
+    <th>Descrição do Metodo</th>
+
   </tr>
 
 <% @metodo_de_pagamentos.each do |metodo_de_pagamento| %>
@@ -20,6 +27,21 @@
 <% end %>
 </table>
 
-<br />
+<div class="tableactions">
+<%= link_to 'New Metodo de Pagamento', new_metodo_de_pagamento_path %>
+</div>
 
-<%= link_to 'New Metodo de pagamento', new_metodo_de_pagamento_path %>
+<div class="pagination right">
+
+</div>
+
+
+</div>
+
+<div class="bendl"></div>
+	<div class="bendr"></div>
+
+	</div>
+
+<% end %>
+
