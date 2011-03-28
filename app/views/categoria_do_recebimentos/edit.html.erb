@@ -1,6 +1,26 @@
-<h1>Editar Categoria do Recebimento</h1>
+<% content_for :formulario do %>
 
-<%= render 'form' %>
+<div class="block"> 
 
-<%= link_to 'Show', @categoria_do_recebimento %> |
-<%= link_to 'Back', categoria_do_recebimentos_path %>
+	<div class="block_head">
+		<div class="bheadl"></div>
+		<div class="bheadr"></div>
+	<h1>Editar Categoria do Recebimento</h1>
+	</div>
+
+	<div class="block_content">
+	<%= render 'form' %>
+	
+		<br/>
+		<hr>
+		<%= link_to 'Show', @categoria_do_recebimento %> |
+		<%= link_to 'Back', categoria_do_recebimentos_path %>
+
+	</div>
+
+	<div class="bendl"></div>
+	<div class="bendr"></div>
+
+</div>    
+
+<% end %>

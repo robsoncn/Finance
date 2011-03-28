@@ -1,15 +1,47 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Nome da forma:</b>
-  <%= @forma_de_recebimento.nome_da_forma %>
-</p>
+<% content_for :tabela do %>
 
-<p>
-  <b>Descricao da forma:</b>
-  <%= @forma_de_recebimento.descricao_da_forma %>
-</p>
+<div class="block"> 
 
+	<div class="block_head">
+			<div class="bheadl"></div>
+			<div class="bheadr"></div>
+			<h2>Resumo do Recebimento</h2>
+	</div>	
+	
+	<div class="block_content">
+	
+		<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
+			<tr>
+				<th>Nome</th>
+				<th>Descrição</th>
+			</tr>	
+			
+			<tr>
+				<td><%= @forma_de_recebimento.nome_da_forma %></td>
+				<td><%= @forma_de_recebimento.descricao_da_forma %></td>
+			</tr>	
+			
+	</table>		
+			
+	<div class="tableactions">
+		<%= link_to 'Edit', edit_forma_de_recebimento_path(@forma_de_recebimento) %> |
+		<%= link_to 'Back', forma_de_recebimentos_path %>
+		</div>
 
-<%= link_to 'Edit', edit_forma_de_recebimento_path(@forma_de_recebimento) %> |
-<%= link_to 'Back', forma_de_recebimentos_path %>
+		<div class="pagination right">
+
+		</div>
+
+	</div>
+
+		<div class="bendl"></div>
+		<div class="bendr"></div>	
+	
+</div>
+
+<% end %> 
+			
+				
+

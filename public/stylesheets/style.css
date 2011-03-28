@@ -8,7 +8,18 @@ Author URI: http://themeforest.net/user/enstyled
 
 
 /* Custom fonts */
-@import url("../fonts/titillium/stylesheet.css");
+/* @import url("../fonts/titillium/stylesheet.css"); */
+
+@font-face {
+  font-family: 'titillium';
+  src: url('../fonts/TitilliumText1.eot');
+    src: url('../fonts/TitilliumText250wt.eot');
+      src: url('../fonts/TitilliumText400wt.eot');
+        src: url('../fonts/TitilliumText600wt.eot');
+          src: url('../fonts/TitilliumText800wt.eot');
+            src: url('../fonts/TitilliumText999wt.eot');
+               src: url('../fonts/TTitillium_title03.eot') format('truetype');
+}
 
 * { padding:0; margin:0; }
 	
