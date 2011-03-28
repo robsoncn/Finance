@@ -33,11 +33,13 @@
     <%= f.label :forma %><br />
   	<%= f.select :forma_de_recebimento_id, @forma_de_recebimentos.collect{|c| [c.nome_da_forma, c.id] }  %>
   </div><br/>
-  <div class="field">
+ 
     <%= f.label :categoria%><br />
-    <%= f.select :categoria_do_recebimento_id, @categoria_do_recebimentos.collect{|b| [b.nome_da_categoria, b.id] }  %>
-   </div> 
-  <div class="actions"><br/>
+    <div class="cmf-skinned-select" style="width: 243px; height: 16px; background-color: rgb(221, 221, 221); color: rgb(0, 0, 0); font-size: 13px; font-family: Arial; font-style: normal; position: relative; ">
+    <select class="styled" style="opacity: 0; position: relative; z-index: 100; ">
+    <%= f.select :categoria_do_recebimento_id, @categoria_do_recebimentos.collect{|b| [b.nome_da_categoria, b.id] }, :class => "styled" %>
+    </div>
+     <div class="actions"><br/>
     <%= f.submit %>
   </div>
 <% end %>
