@@ -1,11 +1,19 @@
-Given /^The System setup is prepared$/ do
-<<<<<<< HEAD
-	TipoDeRecebimento.create!(:nome_do_tipo => "Salário")
-	TipoDeRecebimento.create!(:nome_do_tipo => "Cheque")
-=======
+Given /^The System setup is prepared_1$/ do
+
+	TipoDeRecebimento.create!(:nome_do_tipo => "Salário", :descricao_do_tipo => "mes anterior")
+	TipoDeRecebimento.create!(:nome_do_tipo => "Cheque", :descricao_do_tipo => "Bico")
 	TipoDeRecebimento.create!(:nome_do_tipo => "Salário", :descricao_do_tipo => "Salário do Mês")
-	
->>>>>>> 5ee4e7bbe6a2022ca3374794192671c235a72578
+
+
+  FormaDeRecebimento.create!(:nome_da_forma => "Dinheiro", :descricao_da_forma => "A vista")
+  FormaDeRecebimento.create!(:nome_da_forma => "Cheque", :descricao_da_forma => "Pré Datado")
+  FormaDeRecebimento.create!(:nome_da_forma => "Cartão", :descricao_da_forma => "Vencimento")
+
+  CategoriaDoRecebimento.create!(:nome_da_categoria => "Banco", :descricao_do_tipo => "Boleto")
+  CategoriaDoRecebimento.create!(:nome_da_categoria => "Malassonbro", :descricao_do_tipo => "Sei lá")
+  CategoriaDoRecebimento.create!(:nome_da_categoria => "Geraldo", :descricao_do_tipo => "Escolinha")
+
+
 end
 
 Then /^"([^"]*)" should be selected for "([^"]*)"$/ do |value, field|
@@ -28,5 +36,4 @@ end
 Then /^I should see the following recebimentos:$/ do |expected_recebimentos_table|
   expected_recebimentos_table.diff!(tableish('table tr', 'td,th'))
 end
-
 
