@@ -14,6 +14,7 @@ gem 'rspec-rails'
 gem 'spork'
 gem 'launchy'
 gem 'ruby-debug'
+gem 'jquery-rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'

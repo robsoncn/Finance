@@ -1,0 +1,14 @@
+<% if flash[:notice] -%>
+	<div class="message success" style="display: block; ">
+<p><%= flash[:notice] %></p></div>
+<% end -%>
+
+<% if flash[:error] -%>
+	<div class="message errormsg" style="display: block; ">
+<p><%= flash[:error] %></p></div>
+<% end -%>
+
+<% if flash[:logoff] -%>
+	<div class="message success" style="display: block; ">
+<p><%= flash[:logoff] %></p></div>
+<% end -%>

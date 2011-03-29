@@ -9,6 +9,8 @@ Finance::Application.routes.draw do
   resources :tipo_do_pagamentos
 
   resources :recebimentos
+  
+  match "consulta_data", :to => "recebimentos#consulta_data", :as => "consulta_data"
 
   resources :forma_de_recebimentos
 

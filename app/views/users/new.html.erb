@@ -1,5 +1,28 @@
-<h1>Cadastro de Novo Usuário</h1>
+<% content_for :formulario do %>
 
-<%= render 'form' %><br/>
+<div class="block"> 
 
-<%= link_to 'Back', users_path %>
+	<div class="block_head">
+		<div class="bheadl"></div>
+		<div class="bheadr"></div>
+		<h2>Cadastro de Novo Usuário</h2>
+</div>
+
+	<div class="block_content">
+
+		<%= render 'form' %><br/>
+
+		<br/>
+			<hr>
+			<%= link_to 'Back', users_path %>
+
+		</div>
+
+		<div class="bendl"></div>
+		<div class="bendr"></div>
+
+	</div>    
+
+<% end %>
+
+

@@ -11,6 +11,15 @@ class RecebimentosController < ApplicationController
       format.xml  { render :xml => @recebimentos }
     end
   end
+  
+  def consulta_data
+  @recebimentos = Recebimento.all
+     respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @recebimentos }
+     
+    end
+  end
 
   # GET /recebimentos/1
   # GET /recebimentos/1.xml
@@ -42,6 +51,7 @@ class RecebimentosController < ApplicationController
 
   # POST /recebimentos
   # POST /recebimentos.xml
+ 
   def create
     @recebimento = Recebimento.new(params[:recebimento])
 

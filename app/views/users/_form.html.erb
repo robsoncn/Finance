@@ -1,15 +1,16 @@
 <%= form_for(@user, :html => { :multipart => true }) do |f| %>
 
-	<% if @user.errors.any? %>
-
-		<%= pluralize(@user.errors.count, "error") %> prohibited this registro from being saved:
-
-		<% @user.errors.full_messages.each do |msg| %>
-		<%= msg %>
+		<% if @user.errors.any? %>
+			<div class="message errormsg" style="display: block; ">
+				Não foi possível cadastrar esse usuário</p><br/><br/>
+				<% @user.errors.full_messages.each do |msg| %>
+				<ul>
+					<li><%= msg %></li>
+				</ul>
+				<% end %>
+			</div>
 		<% end %>
-
-	 <% end %>
-	 
+			 
  	  <div class="field">
 		<%= f.label :nome %><br />
 		<%= f.text_field :nome, :class => "text small" %>
@@ -32,8 +33,6 @@
 		<%= f.label :password_confirmation %><br />
 		<%= f.password_field :password_confirmation, :class => "text small" %>
 	  </div><br />
-	  <%= f.submit 'Salvar', :class => 'submit mid' %>
-   
-	  
-	  
+	  <%= f.submit 'Cadastrar', :class => 'submit mid' %>
+ 
 <% end %>
