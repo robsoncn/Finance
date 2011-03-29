@@ -37,7 +37,7 @@
 
 <h1><a href="#">Equilibrium</a></h1>
 	<ul id="nav"> 
-	<li><a href="#">Dashboard</a></li> 
+	<li><%= link_to 'Perfil', profile_path  %></li> 
 	<li class="active"><a href="#">Recebimentos</a> 
 	<ul> 
 	<li><%= link_to 'Resumo', recebimentos_path  %></li>
@@ -59,7 +59,7 @@
 	</li>
 
 	</ul>
-<p class="user">Seja bem vindo, <a href="#">John</a> | <a href="index.html">Logout</a></p> 
+<p class="user">Seja bem vindo, <a href="#"></a> | <%= link_to 'Logout', logout_path  %>
 </div>	
 
 <!-- fim menu ----------------->
@@ -68,22 +68,13 @@
 <%= yield :login -%>
 <!-- Fim Login ---------------->
 
-
 <!-- início tabelas ----------->
-
-
 <%= yield :tabela -%>
-
-
 <!-- fim tabelas -------------->   
 
 
 <!-- início formularios ------->
-
- 
 <%= yield :formulario -%>
-	
-
 <!-- fim formularios ---------->     
 	
 	

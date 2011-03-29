@@ -46,13 +46,13 @@
   </div>
   <div class="field">
     <%= f.label :metodo %><br />
-  	<%= f.select :metodo_de_pagamento_id, @metodo_de_pagamentos.collect{|c| [c.nome_da_metodo, c.id] }  %>
+  	<%= f.select :metodo_de_pagamento_id, @metodo_de_pagamentos.collect{|c| [c.nome_do_metodo, c.id] }  %>
   </div>
   <div class="field">
     <%= f.label :categoria%><br />
     <div class="cmf-skinned-select" style="width: 243px; height: 16px; background-color: rgb(221, 221, 221); color: rgb(0, 0, 0); font-size: 13px; font-family: Arial; font-style: normal; position: relative; ">
     <select class="styled" style="opacity: 0; position: relative; z-index: 100; ">
-    <%= f.select :categoria_do_pagamento_id, @categoria_do_recebimentos.collect{|b| [b.nome_da_categoria, b.id] }, :class => "styled" %>
+    <%= f.select :categoria_do_pagamento_id, @categoria_do_pagamentos.collect{|b| [b.nome_da_categoria, b.id] }, :class => "styled" %>
     </div><br/>
   <div class="actions">
     <%= f.submit %>

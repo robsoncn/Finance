@@ -6,8 +6,11 @@ class Recebimento < ActiveRecord::Base
 
 
 
-   validates :valor_recebimento, :presence => true
-      validates :valor_recebimento, :presence  => true
+   validates :valor_recebimento, :presence  => true
+   validates :descricao_recebimento, :presence  => true
+   validates :tipo_de_recebimento, :presence  => true
+   validates :forma_de_recebimento, :presence  => true
+   validates :categoria_do_recebimento, :presence  => true
 
 
 
