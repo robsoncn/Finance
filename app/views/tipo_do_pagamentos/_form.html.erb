@@ -13,13 +13,14 @@
 
   <div class="field">
     <%= f.label :nome_do_tipo %><br />
-    <%= f.text_field :nome_do_tipo %>
+    <%= f.text_field :nome_do_tipo, :class => "text small"  %>
   </div>
   <div class="field">
     <%= f.label :descricao_do_tipo %><br />
-    <%= f.text_field :descricao_do_tipo %>
+    <%= f.text_field :descricao_do_tipo, :class => "text small"  %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+

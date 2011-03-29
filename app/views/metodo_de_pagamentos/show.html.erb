@@ -1,15 +1,45 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Nome do metodo:</b>
-  <%= @metodo_de_pagamento.nome_do_metodo %>
-</p>
+<% content_for :tabela do %>
 
-<p>
-  <b>Descricao do metodo:</b>
-  <%= @metodo_de_pagamento.descricao_do_metodo %>
-</p>
+<div class="block">
 
+	<div class="block_head">
+			<div class="bheadl"></div>
+			<div class="bheadr"></div>
+			<h2>Resumo do Pagamento</h2>
+	</div>
 
-<%= link_to 'Edit', edit_metodo_de_pagamento_path(@metodo_de_pagamento) %> |
-<%= link_to 'Back', metodo_de_pagamentos_path %>
+	<div class="block_content">
+
+		<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
+			<tr>
+				<th>Nome</th>
+				<th>Descrição</th>
+			</tr>
+
+			<tr>
+				<td><%= @metodo_de_pagamento.nome_do_metodo %></td>
+				<td><%= @metodo_de_pagamento.descricao_do_metodo %></td>
+			</tr>
+
+	</table>
+
+	<div class="tableactions">
+		<%= link_to 'Edit', edit_metodo_de_pagamento_path(@forma_de_recebimento) %> |
+		<%= link_to 'Back', metodo_de_pagamentos_path %>
+		</div>
+
+		<div class="pagination right">
+
+		</div>
+
+	</div>
+
+		<div class="bendl"></div>
+		<div class="bendr"></div>
+
+</div>
+
+<% end %>
+

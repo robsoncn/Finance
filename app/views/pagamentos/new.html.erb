@@ -1,5 +1,27 @@
-<h1>New pagamento</h1>
+<% content_for :formulario do %>
 
-<%= render 'form' %>
+<div class="block">
 
-<%= link_to 'Back', pagamentos_path %>
+	<div class="block_head">
+		<div class="bheadl"></div>
+		<div class="bheadr"></div>
+		<h2>Cadastrar Novo Pagamento</h2>
+	</div>
+
+	<div class="block_content">
+
+		<%= render 'form' %>
+
+<br/>
+		<hr>
+		<p> <%= link_to 'Back', pagamentos_path %> </p>
+
+	</div>
+
+	<div class="bendl"></div>
+	<div class="bendr"></div>
+
+</div>
+
+<% end %>
+

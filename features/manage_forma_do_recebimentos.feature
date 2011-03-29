@@ -9,8 +9,8 @@ Feature: Manage forma_do_recebimentos
     And I follow "New Forma de recebimento"
    	And I fill in "forma_de_recebimento_nome_da_forma" with "Dinheiro"
     And I fill in "forma_de_recebimento_descricao_da_forma" with "Teste de descricao"
-    And I press "Create Forma de recebimento"
-	Then I should see "Forma de recebimento was successfully created."
+    And I press "Cadastrar"
+
 
 	 Scenario: Register new forma_do_recebimentos nome_da_forma null
   	Given I am logged in user
@@ -18,8 +18,8 @@ Feature: Manage forma_do_recebimentos
     And I follow "New Forma de recebimento"
    	And I fill in "forma_de_recebimento_nome_da_forma" with ""
     And I fill in "forma_de_recebimento_descricao_da_forma" with "Teste de descricao"
-    And I press "Create Forma de recebimento"
-	Then I should see "1 error prohibited this forma_de_recebimento from being saved:"
+    And I press "Cadastrar"
+	Then I should see " Não foi possível salvar essa forma de recebimento"
 
 	 Scenario: Register new forma_do_recebimentos descricao_da_forma  null
   	Given I am logged in user
@@ -27,8 +27,8 @@ Feature: Manage forma_do_recebimentos
     And I follow "New Forma de recebimento"
    	And I fill in "forma_de_recebimento_nome_da_forma" with "Dinheiro"
     And I fill in "forma_de_recebimento_descricao_da_forma" with ""
-    And I press "Create Forma de recebimento"
-	Then I should see "1 error prohibited this forma_de_recebimento from being saved:"
+    And I press "Cadastrar"
+	Then I should see " Não foi possível salvar essa forma de recebimento"
 
 		Scenario: Edit forma_do_recebimentos
 			And the following forma_de_recebimentos exists:
@@ -39,8 +39,8 @@ Feature: Manage forma_do_recebimentos
 			And I follow "Edit"
 			And I fill in "forma_de_recebimento_nome_da_forma" with "Dinheiro2"
 			And I fill in "forma_de_recebimento_descricao_da_forma" with "Dinheiro2"
-			And I press "Update Forma de recebimento"
-			Then I should see "Forma de recebimento was successfully updated."
+			And I press "Cadastrar"
+
 
 		Scenario: Destroy forma_do_recebimentos
 			And the following forma_de_recebimentos exists:
@@ -60,8 +60,8 @@ Feature: Manage forma_do_recebimentos
 			And I follow "Edit"
 			And I fill in "forma_de_recebimento_nome_da_forma" with "Dinheiro2"
 			And I fill in "forma_de_recebimento_descricao_da_forma" with "Dinheiro2"
-			And I press "Update Forma de recebimento"
-			Then I should see "Forma de recebimento was successfully updated."
+			And I press "Cadastrar"
+
 
 		Scenario: Destroy forma_do_recebimentos
 			And the following forma_de_recebimentos exists:

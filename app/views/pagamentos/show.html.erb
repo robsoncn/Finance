@@ -1,28 +1,49 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Resumo de Pagamentos</h1>
+<% content_for :tabela do %>
 
-<table>
-	<tr>
-	  <th>Data</th> <td><%= @pagamento.data_pagamento %></td>
-	</tr>
-	<tr>
-	  <th>Valor</th> <td><%= @pagamento.valor_pagamento %></td>
-	</tr>
-	<tr>
-	  <th>Descrição</th> <td><%= @pagamento.descricao_pagamento%></td>
-	</tr>
-	<tr>
-	  <th>Tipo</th>  <td><%= @pagamento.tipo_de_pagamento.nome_do_tipo %></td>
-	</tr>
-	<tr>
-	  <th>Forma</th> <td><%= @pagamento.forma_de_pagamento.nome_da_forma %></td>
-	</tr>
-  	<tr>
-  	  <th>Categoria</th><td><%= @pagamento.categoria_do_pagamento.nome_da_categoria %></td>
-  	</tr>
-</table>
+<div class="block">
 
-<%= link_to 'Edit', edit_pagamento_path(@pagamento) %> |
-<%= link_to 'Back', pagamentos_path %>
+	<div class="block_head">
+			<div class="bheadl"></div>
+			<div class="bheadr"></div>
+			<h2>Resumo do Pagamento</h2>
+	</div>
+
+	<div class="block_content">
+
+		<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
+<tr>
+			<th>Data</th>
+			<th>Valor</th>
+			<th>Descrição</th>
+			<th>Tipo</th>
+			<th>Metodo</th>
+			<th>Categoria</th>
+</tr>
+			<td><%= @pagamento.data_pagamento %></td>
+			<td><%= @pagamento.valor_pagamento %></td>
+			<td><%= @pagamento.descricao_pagamento%></td>
+			<td><%= @pagamento.tipo_de_pagamento.nome_do_tipo %></td>
+			<td><%= @pagamento.metodo_de_pagamento.nome_do_metodo %></td>
+			<td><%= @pagamento.categoria_do_pagamento.nome_da_categoria %></td>
+		</table>
+
+		<div class="tableactions">
+			<%= link_to 'Edit', edit_pagamento_path(@pagamento) %> |
+			<%= link_to 'Back', pagamentos_path %>
+		</div>
+
+		<div class="pagination right">
+
+		</div>
+
+	</div>
+
+	<div class="bendl"></div>
+	<div class="bendr"></div>
+
+</div>
+
+<% end %>
 
