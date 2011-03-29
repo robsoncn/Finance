@@ -1,17 +1,16 @@
 <%= form_for(@recebimento) do |f| %>
-	
-	<% if @recebimento.errors.any? %>
-	<div id="error_explanation">
+		
+		<% if @recebimento.errors.any? %>
+			<div class="message errormsg" style="display: block; ">
+				Não foi possível salvar esse recebimento</p><br/><br/>
+				<% @recebimento.errors.full_messages.each do |msg| %>
+				<ul>
+					<li><%= msg %></li>
+				</ul>
+				<% end %>
+			</div>
+		<% end %>
 
-	<h2><%= pluralize(@recebimento.errors.count, "error") %> Não foi possível salvar esse recebimento:</h2>
-
-	<ul>
-	<% @recebimento.errors.full_messages.each do |msg| %>
-		<li><%= msg %></li>
-	<% end %>
-	</ul>
-</div>
-<% end %>
 
 	<div class="field">
 		<%= f.label :data %><br />
@@ -23,25 +22,25 @@
   </div><br/>
   <div class="field">
   <%= f.label :descricao %><br />
-  <%= f.text_area :descricao_recebimento%>
+  <%= f.text_area :descricao_recebimento, :class => "wysiwyg"%>
   </div>  <br/>
   <div class="field">
     <%= f.label :tipo %><br />
-    <%= f.select :tipo_de_recebimento_id, @tipo_de_recebimentos.collect{|t| [t.nome_do_tipo, t.id] }, :class => "styled"  %>
-  </div><br/>
+    <%= f.select :tipo_de_recebimento_id, @tipo_de_recebimentos.collect{|t| [t.nome_do_tipo, t.id] }, {:prompt => "Selecione um tipo"}, {:class => "styled"} %>
+   </div>  <br/>
   <div class="field">
     <%= f.label :forma %><br />
-  	<%= f.select :forma_de_recebimento_id, @forma_de_recebimentos.collect{|c| [c.nome_da_forma, c.id] }  %>
+   	<%= f.select :forma_de_recebimento_id,  @forma_de_recebimentos.collect{|c| [c.nome_da_forma, c.id] },{:prompt => "Selecione uma forma"}, {:class => "styled"} %>
   </div><br/>
- 
+ <div class="field">
     <%= f.label :categoria%><br />
-    <div class="cmf-skinned-select" style="width: 243px; height: 16px; background-color: rgb(221, 221, 221); color: rgb(0, 0, 0); font-size: 13px; font-family: Arial; font-style: normal; position: relative; ">
-    <select class="styled" style="opacity: 0; position: relative; z-index: 100; ">
-    <%= f.select :categoria_do_recebimento_id, @categoria_do_recebimentos.collect{|b| [b.nome_da_categoria, b.id] }, :class => "styled" %>
-    </div>
-     <div class="actions"><br/>
-    <%= f.submit %>
-  </div>
+    <%= f.select :categoria_do_recebimento_id, @categoria_do_recebimentos.collect{|b| [b.nome_da_categoria, b.id] }, {:prompt => "Selecione uma categoria"}, {:class => "styled"} %>
+     </div>  <br/>
+    
+    
+    <%= f.submit 'Cadastrar', :class => 'submit mid' %>
+   
+   
 <% end %>
 
 

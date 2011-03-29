@@ -1,7 +1,5 @@
 <%= form_for(@user, :html => { :multipart => true }) do |f| %>
 
-	
-	
 	<% if @user.errors.any? %>
 
 		<%= pluralize(@user.errors.count, "error") %> prohibited this registro from being saved:
@@ -12,34 +10,30 @@
 
 	 <% end %>
 	 
-  <% content_for :conteudo do %>
-
-	  <div class="field">
+ 	  <div class="field">
 		<%= f.label :nome %><br />
-		<%= f.text_field :nome %>
+		<%= f.text_field :nome, :class => "text small" %>
 	  </div><br />
 	  <div class="field">
 		<%= f.label :email %><br />
-		<%= f.text_field :email %>
+		<%= f.text_field :email, :class => "text small" %>
 	  </div><br />
 	  <% unless @user.new_record? -%>
 		<div>
 		  <%= f.label :old_password %><br/>
-		  <%= f.password_field :old_password %>
+		  <%= f.password_field :old_password, :class => "text small" %>
 		</div>  <br />
 	  <% end -%>
 	  <div class="field">
 		<%= f.label :password %><br />
-		<%= f.password_field :password %>
+		<%= f.password_field :password, :class => "text small" %>
 	  </div><br />
 	  <div class="field">
 		<%= f.label :password_confirmation %><br />
-		<%= f.password_field :password_confirmation %>
+		<%= f.password_field :password_confirmation, :class => "text small" %>
 	  </div><br />
-	  <div class="actions">
-		<%= f.submit %>
-	  </div>
+	  <%= f.submit 'Salvar', :class => 'submit mid' %>
+   
 	  
-	  <% end %>
 	  
 <% end %>

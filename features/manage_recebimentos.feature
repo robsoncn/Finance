@@ -20,6 +20,6 @@ Feature: Manage recebimentos
         And I select "Salário" from "recebimento_tipo_de_recebimento_id"
         And I select "Dinheiro" from "recebimento_forma_de_recebimento_id"
 		And I select "Família" from "recebimento_categoria_do_recebimento_id"
-	    And I press "Create Recebimento"
+	    And I press "recebimento_submit"
 		Then I should see "Recebimento was successfully created."
 

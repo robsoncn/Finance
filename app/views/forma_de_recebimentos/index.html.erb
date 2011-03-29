@@ -9,12 +9,17 @@
  </div>
     
 <div class="block_content">    
-<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
-  <tr>
-    <th>Nome da forma</th>
-    <th>Descrição da forma</th>
 
-  </tr>
+<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
+
+	<div class="tableactions">
+	<%= link_to 'New Forma de recebimento', new_forma_de_recebimento_path %>
+	</div>
+
+	<tr>
+		<th>Nome da forma</th>
+		<th>Descrição da forma</th>
+	</tr>
 
 <% @forma_de_recebimentos.each do |forma_de_recebimento| %>
   <tr>
@@ -27,9 +32,7 @@
 <% end %>
 </table>
 
-<div class="tableactions">
-<%= link_to 'New Forma de recebimento', new_forma_de_recebimento_path %>
-</div>
+
 
 <div class="pagination right">
 

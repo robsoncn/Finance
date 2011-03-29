@@ -1,16 +1,17 @@
 <%= form_for(@forma_de_recebimento) do |f| %>
-  <% if @forma_de_recebimento.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@forma_de_recebimento.errors.count, "error") %> prohibited this forma_de_recebimento from being saved:</h2>
-
-      <ul>
-      <% @forma_de_recebimento.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+  
+	<% if @forma_de_recebimento.errors.any? %>
+		<div class="message errormsg" style="display: block; ">
+		Não foi possível salvar essa forma de recebimento</p><br/><br/>
+			<% @forma_de_recebimento.errors.full_messages.each do |msg| %>
+			<ul>
+			<li><%= msg %></li>
+			</ul>
+			<% end %>
+		</div>
+	<% end %>
+  
+  
   <div class="field">
     <%= f.label :nome_da_forma %><br />
     <%= f.text_field :nome_da_forma, :class => "text small"   %>
@@ -19,7 +20,8 @@
     <%= f.label :descricao_da_forma %><br />
     <%= f.text_field :descricao_da_forma, :class => "text small"   %>
   </div><br/>
-  <div class="actions">
-    <%= f.submit  %>
-  </div><br/>
+ 
+ <%= f.submit 'Cadastrar', :class => 'submit mid' %>
+ 
+ 
 <% end %>
