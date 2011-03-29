@@ -10,7 +10,7 @@ Feature: Manage forma_do_recebimentos
    	And I fill in "forma_de_recebimento_nome_da_forma" with "Dinheiro"
     And I fill in "forma_de_recebimento_descricao_da_forma" with "Teste de descricao"
     And I press "Cadastrar"
-	Then I should see "Forma de recebimento was successfully created."
+
 
 	 Scenario: Register new forma_do_recebimentos nome_da_forma null
   	Given I am logged in user
@@ -19,7 +19,7 @@ Feature: Manage forma_do_recebimentos
    	And I fill in "forma_de_recebimento_nome_da_forma" with ""
     And I fill in "forma_de_recebimento_descricao_da_forma" with "Teste de descricao"
     And I press "Cadastrar"
-	Then I should see "1 error prohibited this forma_de_recebimento from being saved:"
+	Then I should see " Não foi possível salvar essa forma de recebimento"
 
 	 Scenario: Register new forma_do_recebimentos descricao_da_forma  null
   	Given I am logged in user
@@ -28,7 +28,7 @@ Feature: Manage forma_do_recebimentos
    	And I fill in "forma_de_recebimento_nome_da_forma" with "Dinheiro"
     And I fill in "forma_de_recebimento_descricao_da_forma" with ""
     And I press "Cadastrar"
-	Then I should see "1 error prohibited this forma_de_recebimento from being saved:"
+	Then I should see " Não foi possível salvar essa forma de recebimento"
 
 		Scenario: Edit forma_do_recebimentos
 			And the following forma_de_recebimentos exists:
@@ -40,7 +40,7 @@ Feature: Manage forma_do_recebimentos
 			And I fill in "forma_de_recebimento_nome_da_forma" with "Dinheiro2"
 			And I fill in "forma_de_recebimento_descricao_da_forma" with "Dinheiro2"
 			And I press "Cadastrar"
-			Then I should see "Forma de recebimento was successfully updated."
+
 
 		Scenario: Destroy forma_do_recebimentos
 			And the following forma_de_recebimentos exists:
@@ -61,7 +61,7 @@ Feature: Manage forma_do_recebimentos
 			And I fill in "forma_de_recebimento_nome_da_forma" with "Dinheiro2"
 			And I fill in "forma_de_recebimento_descricao_da_forma" with "Dinheiro2"
 			And I press "Cadastrar"
-			Then I should see "Forma de recebimento was successfully updated."
+
 
 		Scenario: Destroy forma_do_recebimentos
 			And the following forma_de_recebimentos exists:

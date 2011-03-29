@@ -14,9 +14,9 @@ Feature: Manage pagamentos
 		Given I am logged in user
    		When I am on the pagamentos page
    		And I follow "New Pagamento"
-		And I select "2011" from "pagamento_data_do_pagamento_1i"
+		And I select "11" from "pagamento_data_do_pagamento_1i"
 		And I select "Março" from "pagamento_data_do_pagamento_2i"
-		And I select "11" from "pagamento_data_do_pagamento_3i"
+		And I select "2011" from "pagamento_data_do_pagamento_3i"
         And I fill in "pagamento_valor_do_pagamento" with "12,00"
         And I fill in "pagamento_descricao_do_pagamento" with "Teste de descricao"
         And I select "Boleto" from "pagamento_tipo_do_pagamento_id"

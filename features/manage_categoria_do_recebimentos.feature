@@ -10,7 +10,7 @@ Feature: Manage categoria_do_recebimentos
    	And I fill in "categoria_do_recebimento_nome_da_categoria" with "Empresa"
     And I fill in "categoria_do_recebimento_descricao_da_categoria" with "Teste do categoria descrição"
     And I press "Cadastrar"
-	Then I should see "Categoria do recebimento was successfully created."
+
 
 	Scenario: Register new categoria_do_recebimentos nome_da_categoria null
   	Given I am logged in user
@@ -19,7 +19,7 @@ Feature: Manage categoria_do_recebimentos
    	And I fill in "categoria_do_recebimento_nome_da_categoria" with ""
     And I fill in "categoria_do_recebimento_descricao_da_categoria" with "Teste do categoria descrição"
     And I press "Cadastrar"
-	Then I should see "1 error prohibited this categoria_do_recebimento from being saved:"
+	Then I should see " Não foi possível salvar essa categoria do recebimento"
 
 	Scenario: Register new categoria_do_recebimentos descricao_da_categoria null
   	Given I am logged in user
@@ -28,7 +28,7 @@ Feature: Manage categoria_do_recebimentos
    	And I fill in "categoria_do_recebimento_nome_da_categoria" with "Empresa"
     And I fill in "categoria_do_recebimento_descricao_da_categoria" with ""
     And I press "Cadastrar"
-	Then I should see "1 error prohibited this categoria_do_recebimento from being saved:"
+	Then I should see " Não foi possível salvar essa categoria do recebimento"
 
 	Scenario: Edit categoria_do_recebimentos
 		And the following categoria_do_recebimentos exists:
@@ -40,7 +40,7 @@ Feature: Manage categoria_do_recebimentos
 		And I fill in "categoria_do_recebimento_nome_da_categoria" with "Família"
 		And I fill in "categoria_do_recebimento_descricao_da_categoria" with "Rec família"
 		And I press "Cadastrar"
-		Then I should see "Categoria do recebimento was successfully updated."
+
 
 	Scenario: Register new categoria_do_recebimentos nome_da_categoria null
   	Given I am logged in user
@@ -49,7 +49,7 @@ Feature: Manage categoria_do_recebimentos
    	And I fill in "categoria_do_recebimento_nome_da_categoria" with ""
     And I fill in "categoria_do_recebimento_descricao_da_categoria" with "Teste do categoria descrição"
     And I press "Cadastrar"
-	Then I should see "1 error prohibited this categoria_do_recebimento from being saved:"
+	Then I should see " Não foi possível salvar essa categoria do recebimento"
 
 	Scenario: Register new categoria_do_recebimentos descricao_da_categoria null
   	Given I am logged in user
@@ -58,7 +58,7 @@ Feature: Manage categoria_do_recebimentos
    	And I fill in "categoria_do_recebimento_nome_da_categoria" with "Empresa"
     And I fill in "categoria_do_recebimento_descricao_da_categoria" with ""
     And I press "Cadastrar"
-	Then I should see "1 error prohibited this categoria_do_recebimento from being saved:"
+	Then I should see " Não foi possível salvar essa categoria do recebimento"
 
 	Scenario: Edit categoria_do_recebimentos
 		And the following categoria_do_recebimentos exists:
@@ -70,5 +70,4 @@ Feature: Manage categoria_do_recebimentos
 		And I fill in "categoria_do_recebimento_nome_da_categoria" with "Família"
 		And I fill in "categoria_do_recebimento_descricao_da_categoria" with "Rec família"
 		And I press "Cadastrar"
-		Then I should see "Categoria do recebimento was successfully updated."
 

@@ -10,7 +10,7 @@ Feature: Manage tipo_do_pagamentos
   		And I fill in "tipo_do_pagamento_nome_do_tipo" with "Dinheiro"
         And I fill in "tipo_do_pagamento_descricao_do_tipo" with "Teste de descricao3"
         And I press "Create Tipo do pagamento"
-		Then I should see "Tipo do pagamento was successfully created."
+
 
         Scenario: Create new tipo_do_pagamentos error nome null
   		Given I am logged in user
@@ -40,5 +40,4 @@ Feature: Manage tipo_do_pagamentos
 			And I fill in "tipo_do_pagamento_nome_do_tipo" with "Teste"
 			And I fill in "tipo_do_pagamento_descricao_do_tipo" with "Teste de descricao2"
 			And I press "Update Tipo do pagamento"
-			Then I should see "Tipo do pagamento was successfully updated."
 

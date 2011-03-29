@@ -3,13 +3,23 @@ Feature: Manage users
     As an a visitor
     I want test some scenarios
 
-    Scenario: Create an user
-        Given I am on the new user page
-        When I fill in "Nome" with "Robson"
-        And I fill in "Email" with "robson@khronus.com.br"
+    Scenario: Login
+        Given I am on the login page
+        When I fill in "Email" with "robson@khronus.com.br"
         And I fill in "Password" with "123456"
-        And I fill in "Password confirmation" with "123456"
-        And I press "Create User"
+        And I press "login"
+
+     Scenario: Login
+        Given I am on the login page
+        When I fill in "Email" with "linus@khronus.com.br"
+        And I fill in "Password" with ""
+        And I press "login"
+
+    Scenario: Login
+        Given I am on the login page
+        When I fill in "Email" with ""
+        And I fill in "Password" with "123456"
+        And I press "login"
 
 		Scenario: Create an user error nome
 			Given I am on the new user page
@@ -46,13 +56,6 @@ Feature: Manage users
 			And I fill in "Password confirmation" with "1234"
 			And I press "Create User"
 			Then I should see "1 error prohibited this registro from being saved: Password não está de acordo com a confirmação"
-
-			Scenario: Login error
-			Given I am on the new session page
-			And I fill in "Email" with "Truke@khronus.com.br"
-			And I fill in "Password" with "1342"
-			And I press "login"
-			Then I should see "Email/Senha incorretos"
 
 
     Scenario: Edit an user

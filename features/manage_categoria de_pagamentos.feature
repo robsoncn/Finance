@@ -9,7 +9,7 @@ Feature: Manage categoria_do_pagamentos
     And I follow "New Categoria do Pagamento"
    	And I fill in "categoria_do_pagamento_nome_da_categoria" with "Aluguel"
     And I press "Create Categoria do pagamento"
-	Then I should see "Categoria do pagamento was successfully created."
+
 
     	Scenario: Register new categoria_do_pagamentos nome_da_categoria null
   	Given I am logged in user
@@ -28,5 +28,4 @@ Feature: Manage categoria_do_pagamentos
 		And I follow "Edit"
 		And I fill in "categoria_do_pagamento_nome_da_categoria" with "Família"
 		And I press "Update Categoria do pagamento"
-		Then I should see "Categoria do pagamento was successfully updated."
 
