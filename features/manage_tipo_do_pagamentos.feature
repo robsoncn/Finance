@@ -9,7 +9,7 @@ Feature: Manage tipo_do_pagamentos
   		And I follow "New Tipo do Pagamento"
   		And I fill in "tipo_do_pagamento_nome_do_tipo" with "Dinheiro"
         And I fill in "tipo_do_pagamento_descricao_do_tipo" with "Teste de descricao3"
-        And I press "Create Tipo do pagamento"
+        And I press "Cadastrar"
 
 
         Scenario: Create new tipo_do_pagamentos error nome null
@@ -18,8 +18,8 @@ Feature: Manage tipo_do_pagamentos
   		And I follow "New Tipo do Pagamento"
   		And I fill in "tipo_do_pagamento_nome_do_tipo" with ""
         And I fill in "tipo_do_pagamento_descricao_do_tipo" with "Teste de descricao"
-        And I press "Create Tipo do pagamento"
-		Then I should see "1 error prohibited this tipo_do_pagamento from being saved: "
+        And I press "Cadastrar"
+		Then I should see "Não foi possível salvar esse tipo de pagamento"
 
 		Scenario: Create new tipo_do_pagamentos error descricao null
   		Given I am logged in user
@@ -27,8 +27,8 @@ Feature: Manage tipo_do_pagamentos
   		And I follow "New Tipo do Pagamento"
   		And I fill in "tipo_do_pagamento_nome_do_tipo" with "Teste"
         And I fill in "tipo_do_pagamento_descricao_do_tipo" with ""
-        And I press "Create Tipo do pagamento"
-		Then I should see "1 error prohibited this tipo_do_pagamento from being saved:"
+        And I press "Cadastrar"
+		Then I should see "Não foi possível salvar esse tipo de pagamento"
 
 		Scenario: Edit tipo_do_pagamentos
 			And the following tipo_do_pagamentos exists:
@@ -39,5 +39,5 @@ Feature: Manage tipo_do_pagamentos
 			And I follow "Edit"
 			And I fill in "tipo_do_pagamento_nome_do_tipo" with "Teste"
 			And I fill in "tipo_do_pagamento_descricao_do_tipo" with "Teste de descricao2"
-			And I press "Update Tipo do pagamento"
+			And I press "Cadastrar"
 

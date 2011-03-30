@@ -14,62 +14,93 @@ Feature: Manage users
         When I fill in "Email" with "linus@khronus.com.br"
         And I fill in "Password" with ""
         And I press "login"
+        Then I should see "Email/Senha incorretos"
 
-    Scenario: Login
+     Scenario: Login
         Given I am on the login page
         When I fill in "Email" with ""
         And I fill in "Password" with "123456"
         And I press "login"
+        Then I should see "Email/Senha incorretos"
 
-		Scenario: Create an user error nome
-			Given I am on the new user page
-			When I fill in "Nome" with "linus"
-			And I fill in "Email" with "linus@khronus.com.br"
+     Scenario: Login
+        Given I am on the login page
+        When I fill in "Email" with "jimmy"
+        And I fill in "Password" with "12"
+        And I press "login"
+        Then I should see "Email/Senha incorretos"
+
+    Scenario: Login
+        Given I am on the login page
+        When I fill in "Email" with "chico"
+        And I fill in "Password" with ""
+        And I press "login"
+        Then I should see "Email/Senha incorretos"
+
+    Scenario: Create an new user
+		Given I am on the login page
+        And I follow "Quero me cadastrar"
+		When I fill in "Nome" with "linus"
+		And I fill in "Email" with "linus@khronus.com.br"
+		And I fill in "Password" with "123456"
+		And I fill in "Password confirmation" with "123456"
+		And I press "Cadastrar"
+
+        Scenario: Create an user error nome
+			Given I am on the login page
+            And I follow "Quero me cadastrar"
+			When I fill in "Nome" with "tr"
+			And I fill in "Email" with "tryon@khronus.com.br"
 			And I fill in "Password" with "123456"
 			And I fill in "Password confirmation" with "123456"
-			And I press "Create User"
-			Then I should see "1 error prohibited this registro from being saved: Nome é muito curto (mínimo: 4 caracteres)"
+			And I press "Cadastrar"
+            Then I should see "Não foi possível cadastrar esse usuário"
 
-			Scenario: Create an user error email
-			Given I am on the new user page
-			When I fill in "Nome" with "trtets"
-			And I fill in "Email" with "trykhronus.com.br"
+
+		Scenario: Create an user error email
+			Given I am on the login page
+            And I follow "Quero me cadastrar"
+			When I fill in "Nome" with "tryon"
+			And I fill in "Email" with "tryonkhronus.com.br"
 			And I fill in "Password" with "123456"
 			And I fill in "Password confirmation" with "123456"
-			And I press "Create User"
-			Then I should see "1 error prohibited this registro from being saved: Email não é válido"
+			And I press "Cadastrar"
+            Then I should see "Não foi possível cadastrar esse usuário"
 
 			Scenario: Create an user error password
-			Given I am on the new user page
-			When I fill in "Nome" with "trtete"
-			And I fill in "Email" with "tr@khronus.com.br"
+			Given I am on the login page
+            And I follow "Quero me cadastrar"
+			When I fill in "Nome" with "minotauro"
+			And I fill in "Email" with "minotauro@khronus.com.br"
 			And I fill in "Password" with "12"
 			And I fill in "Password confirmation" with ""
-			And I press "Create User"
-			Then I should see "2 errors prohibited this registro from being saved: Password é muito curto (mínimo: 6 caracteres) Password não está de acordo com a confirmação"
+			And I press "Cadastrar"
+			Then I should see "Não foi possível cadastrar esse usuário"
 
-			Scenario: Create an user error password confirmation
-			Given I am on the new user page
-			When I fill in "Nome" with "trtete"
-			And I fill in "Email" with "tr@khronus.com.br"
+		Scenario: Create an user error password confirmation
+			Given I am on the login page
+            And I follow "Quero me cadastrar"
+			When I fill in "Nome" with "centauro"
+			And I fill in "Email" with "centauto@khronus.com.br"
 			And I fill in "Password" with "123456"
 			And I fill in "Password confirmation" with "1234"
-			And I press "Create User"
-			Then I should see "1 error prohibited this registro from being saved: Password não está de acordo com a confirmação"
+			And I press "Cadastrar"
+            Then I should see "Não foi possível cadastrar esse usuário"
 
 
-    Scenario: Edit an user
-    	Given I am logged in user
-    	And I am on the profile page
-       	When I follow "Edit"
-     	And I fill in "Nome" with "Chuck Norris"
-    	And I fill in "Email" with "chucknorris@gmail.com"
-    	And I fill in "Password" with "123456"
-    	And I press "Update User"
-    	Then I should see "User was successfully updated."
+        Scenario: Edit an user
+        	Given I am logged in user
+        	And I am on the profile page
+           	When I follow "Edit"
+         	And I fill in "Nome" with "Chuck Norris"
+        	And I fill in "Email" with "chucknorris@gmail.com"
+        	And I fill in "Password" with "123456"
+            And I fill in "Password confirmation" with "123456"
+        	And I press "Cadastrar"
 
-	Scenario: Destroy an user
-		Given I am logged in user
-		And I am on the profile page
-		When  I follow "Apagar minha conta"
+
+	    Scenario: Destroy an user
+		    Given I am logged in user
+		    And I am on the profile page
+		    When  I follow "Apagar minha conta"
 

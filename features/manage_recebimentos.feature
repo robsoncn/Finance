@@ -5,7 +5,7 @@ Feature: Manage recebimentos
 
 
    Background:
-    Given The System setup is prepared_1
+    Given The System setup ready
 
     Scenario: Create new recebimentos
 
