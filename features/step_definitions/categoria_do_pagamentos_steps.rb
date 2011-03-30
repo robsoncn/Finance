@@ -11,7 +11,7 @@ end
 
 Then /^the following categoria_do_pagamentos exists:$/ do |table|
   table.hashes.each do |hash|
-   t = CategoriaDoPagamento.create!(:nome_da_categoria => hash[:nome_da_categoria] )
+   t = CategoriaDoPagamento.create!(:nome_da_categoria => hash[:nome_da_categoria], :descricao_da_categoria => hash[:descricao_da_categoria] )
 	end
 end
 

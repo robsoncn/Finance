@@ -1,4 +1,4 @@
-Given /^The System setup is prepared_1$/ do
+Given /^The System setup ready$/ do
 
 	TipoDeRecebimento.create!(:nome_do_tipo => "Salário", :descricao_do_tipo => "mes anterior")
 	TipoDeRecebimento.create!(:nome_do_tipo => "Cheque", :descricao_do_tipo => "Bico")

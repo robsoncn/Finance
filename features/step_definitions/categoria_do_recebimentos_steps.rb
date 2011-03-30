@@ -10,7 +10,7 @@ When /^I delete the (\d+)(?:st|nd|rd|th) categoria_do_recebimentos$/ do |pos|
 end
 
 Then /^the following categoria_do_recebimentos exists:$/ do |table|
-  table.hashes.each do |hash|	
+  table.hashes.each do |hash|
    t = CategoriaDoRecebimento.create!(:nome_da_categoria => hash[:nome_da_categoria], :descricao_da_categoria => hash[:descricao_da_categoria] )
 	end
 end
@@ -18,3 +18,4 @@ end
 Then /^I should see the following categoria_do_recebimentos:$/ do |expected_categoria_do_recebimentos_table|
   expected_categoria_do_recebimentos_table.diff!(tableish('table tr', 'td,th'))
 end
+
