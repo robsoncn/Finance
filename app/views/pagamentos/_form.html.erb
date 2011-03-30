@@ -11,27 +11,27 @@
 	<% end %>
 
 	<div class="field">
-		<%= f.label :data %><br />
+		<%= f.label :data, "Data do Pagamento	" %><br />
 		<%= f.text_field :data_do_pagamento, :class => "text date_picker"%>
 	</div><br/>
 	<div class="field">
-		<%= f.label :valor_do_pagamento%><br />
+		<%= f.label :valor_do_pagamento, "Valor à Pagar"%><br />
 		<%= f.text_field :valor_do_pagamento, :class => "text small"  %>
 	</div><br />
 	<div class="field">
-		<%= f.label :descricao_do_pagamento %><br />
+		<%= f.label :descricao_do_pagamento, "Descrição" %><br />
 		<%= f.text_area :descricao_do_pagamento, :class => "wysiwyg"  %>
 	</div><br />
 	<div class="field">
-	<%= f.label :tipo_do_pagamento %><br />
+	<%= f.label :tipo_do_pagamento, "Tipo do Pagamento" %><br />
 	<%= f.select :tipo_do_pagamento_id, @tipo_do_pagamentos.collect{|t| [t.nome_do_tipo, t.id] }, {:prompt => "Selecione um tipo"}, {:class => "styled"} %>
 	</div><br/>
 	<div class="field">
-	<%= f.label :metodo_de_pagamento %><br />
+	<%= f.label :metodo_de_pagamento, "Método do Pagamento" %><br />
 	<%= f.select :metodo_de_pagamento_id, @metodo_de_pagamentos.collect{|t| [t.nome_do_metodo, t.id] }, {:prompt => "Selecione um método"}, {:class => "styled"} %>
 	</div><br />
 	<div class="field">
-	<%= f.label :categoria_do_pagamento %><br />
+	<%= f.label :categoria_do_pagamento, "Categoria do Pagamento" %><br />
 	<%= f.select :categoria_do_pagamento_id, @categoria_do_pagamentos.collect{|t| [t.nome_da_categoria, t.id] }, {:prompt => "Selecione uma categoria"}, {:class => "styled"} %>
 	</div><br />
 

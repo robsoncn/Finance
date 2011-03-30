@@ -13,11 +13,11 @@
 
 
 	<div class="field">
-		<%= f.label :data %><br />
+		<%= f.label :data, "Data de Recebimento" %><br />
 		<%= f.text_field :data_recebimento, :class => "text date_picker"%>
 	</div><br/>
   <div class="field">
-    <%= f.label :valor %><br />
+    <%= f.label :valor, "Valor à Receber" %><br />
     <%= f.text_field :valor_recebimento, :class => "text small" %>
   </div><br/>
   <div class="field">
@@ -25,15 +25,15 @@
   <%= f.text_area :descricao_recebimento, :class => "wysiwyg"%>
   </div>  <br/>
   <div class="field">
-    <%= f.label :tipo %><br />
+    <%= f.label :tipo, "Tipo do Recebimento" %><br />
     <%= f.select :tipo_de_recebimento_id, @tipo_de_recebimentos.collect{|t| [t.nome_do_tipo, t.id] }, {:prompt => "Selecione um tipo"}, {:class => "styled"} %>
    </div>  <br/>
   <div class="field">
-    <%= f.label :forma %><br />
+    <%= f.label :forma, "Forma de Recebimento" %><br />
    	<%= f.select :forma_de_recebimento_id,  @forma_de_recebimentos.collect{|c| [c.nome_da_forma, c.id] },{:prompt => "Selecione uma forma"}, {:class => "styled"} %>
   </div><br/>
  <div class="field">
-    <%= f.label :categoria%><br />
+    <%= f.label :categoria, "Categoria do Recebimento"%><br />
     <%= f.select :categoria_do_recebimento_id, @categoria_do_recebimentos.collect{|b| [b.nome_da_categoria, b.id] }, {:prompt => "Selecione uma categoria"}, {:class => "styled"} %>
      </div>  <br/>
     

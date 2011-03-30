@@ -11,13 +11,13 @@
 <div class="block_content">    
 	<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
 	
-		<div class="tableactions">
-		<%= link_to 'New Tipo de recebimento', new_tipo_de_recebimento_path %>
-		</div>
+	<div class="tableactions" style="text-align: center">
+	<%= link_to image_tag('icones/Add.png', :title => "Cadastrar"), new_recebimento_path %>
+	</div>
 	
 		<tr>
-			<th>Nome do tipo</th>
-			<th>Descrição do tipo</th>
+			<th>Nome</th>
+			<th>Descrição</th>
 		</tr>
 
 	<% @tipo_de_recebimentos.each do |tipo_de_recebimento| %>
@@ -26,9 +26,10 @@
 		  <td><%= tipo_de_recebimento.descricao_do_tipo %></td>
 		  
 		  
-		  <td><%= link_to 'Show', tipo_de_recebimento %></td>
-		  <td><%= link_to 'Edit', edit_tipo_de_recebimento_path(tipo_de_recebimento) %></td>
-		  <td><%= link_to 'Destroy', tipo_de_recebimento, :confirm => 'Are you sure?', :method => :delete %></td>
+		<td><%= link_to image_tag('icones/Search.png', :title => "Visualizar"), tipo_de_recebimento %></td>
+		<td><%= link_to image_tag('icones/Modify.png', :title => "Editar"), edit_tipo_de_recebimento_path(tipo_de_recebimento) %></td>
+		<td><%= link_to image_tag('icones/Delete.png', :title => "Deletar"), tipo_de_recebimento, :confirm => 'Are you sure?', :method => :delete %></td>
+		
 		</tr>
 		
 	<% end %>

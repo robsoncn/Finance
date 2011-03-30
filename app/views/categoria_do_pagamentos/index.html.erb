@@ -10,22 +10,22 @@
 	<div class="block_content">
 		<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
 
-			<div class="tableactions">
-			<%= link_to 'New Categoria do Pagamento', new_categoria_do_pagamento_path %>
-			</div>
+	<div class="tableactions" style="text-align: center">
+		<%= link_to image_tag('icones/Add.png', :title => "Cadastrar"), new_pagamento_path %>
+	</div>
 
 			<tr>
-				<th>Nome da categoria</th>
-				<th>Descrição da Categoria</th>
+				<th>Nome</th>
+				<th>Descrição</th>
 			</tr>
 
 			<% @categoria_do_pagamentos.each do |categoria_do_pagamento| %>
 			<tr>
 				<td><%= categoria_do_pagamento.nome_da_categoria %></td>
 				<td><%= categoria_do_pagamento.descricao_da_categoria %></td>
-				<td><%= link_to 'Show', categoria_do_pagamento %></td>
-				<td><%= link_to 'Edit', edit_categoria_do_pagamento_path(categoria_do_pagamento) %></td>
-				<td><%= link_to 'Destroy', categoria_do_pagamento, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to image_tag('icones/Search.png', :title => "Visualizar"), categoria_do_pagamento %></td>
+		<td><%= link_to image_tag('icones/Modify.png', :title => "Editar"), edit_categoria_do_pagamento_path(categoria_do_pagamento) %></td>
+		<td><%= link_to image_tag('icones/Delete.png', :title => "Deletar"), categoria_do_pagamento, :confirm => 'Are you sure?', :method => :delete %></td>
 			</tr>
 		<% end %>
 		</table>

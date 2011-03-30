@@ -11,13 +11,13 @@
 <div class="block_content">
 <table cellpadding="0" cellspacing="0" width="100%" class="sortable">
 
-	<div class="tableactions">
-<%= link_to 'New Metodo de Pagamento', new_metodo_de_pagamento_path %>
-</div>
+	<div class="tableactions" style="text-align: center">
+		<%= link_to image_tag('icones/Add.png', :title => "Cadastrar"), new_pagamento_path %>
+	</div>
 
   <tr>
-    <th>Nome do Metodo</th>
-    <th>Descrição do Metodo</th>
+    <th>Nome</th>
+    <th>Descrição</th>
 
   </tr>
 
@@ -25,9 +25,9 @@
   <tr>
     <td><%= metodo_de_pagamento.nome_do_metodo %></td>
     <td><%= metodo_de_pagamento.descricao_do_metodo %></td>
-    <td><%= link_to 'Show', metodo_de_pagamento %></td>
-    <td><%= link_to 'Edit', edit_metodo_de_pagamento_path(metodo_de_pagamento) %></td>
-    <td><%= link_to 'Destroy', metodo_de_pagamento, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to image_tag('icones/Search.png', :title => "Visualizar"), metodo_de_pagamento %></td>
+		<td><%= link_to image_tag('icones/Modify.png', :title => "Editar"), edit_metodo_de_pagamento_path(metodo_de_pagamento) %></td>
+		<td><%= link_to image_tag('icones/Delete.png', :title => "Deletar"), metodo_de_pagamento, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
