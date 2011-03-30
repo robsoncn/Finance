@@ -1,61 +1,40 @@
 <%= form_for(@pagamento) do |f| %>
+	<% if @pagamento.errors.any? %>
+		<div class="message errormsg" style="display: block; ">
+		Não foi possível salvar esse pagamento</p><br/><br/>
+		<% @pagamento.errors.full_messages.each do |msg| %>
+		<ul>
+		<li><%= msg %></li>
+		</ul>
+		<% end %>
+		</div>
+	<% end %>
 
-  <% if @pagamento.errors.any? %>
-  <div id="error_explanation">
-
-  <h2><%= pluralize(@pagamento.errors.count, "error") %> Não foi possível salvar esse pagamento:</h2>
-
-      <ul>
-      <% @pagamento.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 	<div class="field">
 		<%= f.label :data %><br />
 		<%= f.text_field :data_do_pagamento, :class => "text date_picker"%>
 	</div><br/>
-  <div class="field">
-    <%= f.label :valor_do_pagamento,:class => "text small" %>
-    <%= f.text_field :valor_do_pagamento %>
-  </div><br />
-  <div class="field">
-    <%= f.label :descricao_do_pagamento %><br />
-    <%= f.text_field :descricao_do_pagamento %>
-  </div>
-  <div class="field">
-    <%= f.label :user %><br />
-    <%= f.text_field :user %>
-  </div>
-  <div class="field">
-    <%= f.label :tipo_do_pagamento %><br />
-    <%= f.text_field :tipo_do_pagamento %>
-  </div>
-  <div class="field">
-    <%= f.label :metodo_de_pagamento %><br />
-    <%= f.text_field :metodo_de_pagamento %>
-  </div>
-  <div class="field">
-    <%= f.label :categoria_do_pagamento %><br />
-    <%= f.text_field :categoria_do_pagamento %>
-  </div>
-  <div class="field">
-    <%= f.label :tipo %><br />
-    <%= f.select :tipo_do_pagamento_id, @tipo_do_pagamentos.collect{|t| [t.nome_do_tipo, t.id] }  %>
-  </div>
-  <div class="field">
-    <%= f.label :metodo %><br />
-  	<%= f.select :metodo_de_pagamento_id, @metodo_de_pagamentos.collect{|c| [c.nome_do_metodo, c.id] }  %>
-  </div>
-  <div class="field">
-    <%= f.label :categoria%><br />
-    <div class="cmf-skinned-select" style="width: 243px; height: 16px; background-color: rgb(221, 221, 221); color: rgb(0, 0, 0); font-size: 13px; font-family: Arial; font-style: normal; position: relative; ">
-    <select class="styled" style="opacity: 0; position: relative; z-index: 100; ">
-    <%= f.select :categoria_do_pagamento_id, @categoria_do_pagamentos.collect{|b| [b.nome_da_categoria, b.id] }, :class => "styled" %>
-    </div><br/>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+	<div class="field">
+		<%= f.label :valor_do_pagamento%><br />
+		<%= f.text_field :valor_do_pagamento, :class => "text small"  %>
+	</div><br />
+	<div class="field">
+		<%= f.label :descricao_do_pagamento %><br />
+		<%= f.text_area :descricao_do_pagamento, :class => "wysiwyg"  %>
+	</div><br />
+	<div class="field">
+	<%= f.label :tipo_do_pagamento %><br />
+	<%= f.select :tipo_do_pagamento_id, @tipo_do_pagamentos.collect{|t| [t.nome_do_tipo, t.id] }, {:prompt => "Selecione um tipo"}, {:class => "styled"} %>
+	</div><br/>
+	<div class="field">
+	<%= f.label :metodo_de_pagamento %><br />
+	<%= f.select :metodo_de_pagamento_id, @metodo_de_pagamentos.collect{|t| [t.nome_do_metodo, t.id] }, {:prompt => "Selecione um método"}, {:class => "styled"} %>
+	</div><br />
+	<div class="field">
+	<%= f.label :categoria_do_pagamento %><br />
+	<%= f.select :categoria_do_pagamento_id, @categoria_do_pagamentos.collect{|t| [t.nome_da_categoria, t.id] }, {:prompt => "Selecione uma categoria"}, {:class => "styled"} %>
+	</div><br />
+
+	<%= f.submit 'Cadastrar', :class => 'submit mid' %>
 <% end %>
 

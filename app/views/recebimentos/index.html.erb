@@ -1,4 +1,4 @@
-<% content_for :tabela do %>
+<% content_for :conteudo do %>
 
 <div class="block">
 
@@ -33,27 +33,22 @@
 		<td><%= recebimento.tipo_de_recebimento.nome_do_tipo %></td>
 		<td><%= recebimento.forma_de_recebimento.nome_da_forma %></td>
 		<td><%= recebimento.categoria_do_recebimento.nome_da_categoria %></td>
+		
+
 		<td><%= link_to 'Visualizar', recebimento %></td>
 		<td><%= link_to 'Editar', edit_recebimento_path(recebimento) %></td>
 		<td><%= link_to 'Deletar', recebimento, :confirm => 'Are you sure?', :method => :delete %></td>
+
 	  </tr>
 
 	<% end %>
 
 		<tr>
-<<<<<<< HEAD
-			<td><b>Valor Acumulado</b></td>
-			<% @total = Recebimento.sum (:valor_recebimento) %>
-			<td align='right'><b>   <%=h @total %> </b></td>
-
-			</tr>
-=======
 			<td colspan="2"><b>Valor Acumulado</b></td>  
 			<% @total = Recebimento.sum (:valor_recebimento) %>
 			<td align='right'><b>   <%=h @total %> </b></td>  
-		</tr>
+			</tr>
 </table>
->>>>>>> 80bc814233220f82824b482dce4903bc76d45e7e
 
 
 
@@ -64,15 +59,11 @@
 </div>
 
 <div class="bendl"></div>
-<<<<<<< HEAD
+
 	<div class="bendr"></div>
 
 	</div>
-=======
-<div class="bendr"></div>	
-	
-</div>
->>>>>>> 80bc814233220f82824b482dce4903bc76d45e7e
+
 
 
 <% end %>

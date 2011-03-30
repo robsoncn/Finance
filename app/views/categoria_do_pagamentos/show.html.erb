@@ -1,6 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<% content_for :tabela do %>
+<% content_for :conteudo do %>
 
 <div class="block">
 
@@ -8,12 +6,16 @@
 			<div class="bheadl"></div>
 			<div class="bheadr"></div>
   <h2>Nome da categoria:<h2>
+  <h2>Descrição da categoria:<h2>
   </div>
 
 	<div class="block_content">
+	
+	<%= render :partial => '/shared/messages' %> 
+	<p id="notice">
 
  <td><%= @categoria_do_pagamento.nome_da_categoria %></td>
-
+ <td><%= @categoria_do_pagamento.descricao_da_categoria %></td>
 
 </p>
 

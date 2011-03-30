@@ -1,26 +1,24 @@
 <%= form_for(@metodo_de_pagamento) do |f| %>
-  <% if @metodo_de_pagamento.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@metodo_de_pagamento.errors.count, "error") %> prohibited this metodo_de_pagamento from being saved:</h2>
 
-      <ul>
-      <% @metodo_de_pagamento.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	<% if @metodo_de_pagamento.errors.any? %>
+		<div class="message errormsg" style="display: block; ">
+		Não foi possível salvar esse método de pagamento</p><br/><br/>
+		<% @metodo_de_pagamento.errors.full_messages.each do |msg| %>
+		<ul>
+		<li><%= msg %></li>
+		</ul>
+		<% end %>
+		</div>
+	<% end %>
 
-  <div class="field">
-    <%= f.label :nome_do_metodo %><br />
-    <%= f.text_field :nome_do_metodo, :class => "text small" %>
-  </div>
-  <div class="field">
-    <%= f.label :descricao_do_metodo %><br />
-    <%= f.text_field :descricao_do_metodo, :class => "text small" %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+	<div class="field">
+		<%= f.label :nome_do_metodo %><br />
+		<%= f.text_field :nome_do_metodo, :class => "text small" %>
+		</div><br/>
+		<div class="field">
+		<%= f.label :descricao_do_metodo %><br />
+		<%= f.text_field :descricao_do_metodo, :class => "text small" %>
+		</div><br/>
+		<%= f.submit 'Cadastrar', :class => 'submit mid' %>
 <% end %>
 

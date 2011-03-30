@@ -1,4 +1,4 @@
-<% content_for :tabela do %>
+<% content_for :conteudo do %>
 
 <div class="block">
 
@@ -10,6 +10,10 @@
 
 <div class="block_content">
 	<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
+	
+			<div class="tableactions">
+	<%= link_to 'New Tipo do Pagamento', new_tipo_do_pagamento_path %>
+	
 		<tr>
 			<th>Nome do tipo</th>
 			<th>Descrição do tipo</th>
@@ -27,22 +31,19 @@
 		</tr>
 
 	<% end %>
-	</table>
-
-	<div class="tableactions">
-	<%= link_to 'New Tipo do Pagamento', new_tipo_do_pagamento_path %>
-	</div>
+</table>
 
 	<div class="pagination right">
 
 	</div>
 
-
+</div>
 
 <div class="bendl"></div>
-	<div class="bendr"></div>
-
+	<div class="bendr"></div>	
+	
 	</div>
 
-<% end %>
+<% end %> 
+	
 

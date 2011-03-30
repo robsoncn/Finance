@@ -1,45 +1,43 @@
-<% content_for :tabela do %>
+<% content_for :conteudo do %>
 
 <div class="block">
-
 	<div class="block_head">
 		<div class="bheadl"></div>
 		<div class="bheadr"></div>
-		<h2>Lista de Categorias de Pagamentos</h2>
-  </div>
+	<h2>Lista de Categorias de Pagamentos</h2>
+	</div>
 
-<div class="block_content">
-<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
-  <tr>
-    <th>Nome da categoria</th>
+	<div class="block_content">
+		<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
 
-  </tr>
+			<div class="tableactions">
+			<%= link_to 'New Categoria do Pagamento', new_categoria_do_pagamento_path %>
+			</div>
 
-<% @categoria_do_pagamentos.each do |categoria_do_pagamento| %>
-  <tr>
-    <td><%= categoria_do_pagamento.nome_da_categoria %></td>
-    <td><%= link_to 'Show', categoria_do_pagamento %></td>
-    <td><%= link_to 'Edit', edit_categoria_do_pagamento_path(categoria_do_pagamento) %></td>
-    <td><%= link_to 'Destroy', categoria_do_pagamento, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+			<tr>
+				<th>Nome da categoria</th>
+				<th>Descrição da Categoria</th>
+			</tr>
 
-<div class="tableactions">
-<%= link_to 'New Categoria do Pagamento', new_categoria_do_pagamento_path %>
-</div>
+			<% @categoria_do_pagamentos.each do |categoria_do_pagamento| %>
+			<tr>
+				<td><%= categoria_do_pagamento.nome_da_categoria %></td>
+				<td><%= categoria_do_pagamento.descricao_da_categoria %></td>
+				<td><%= link_to 'Show', categoria_do_pagamento %></td>
+				<td><%= link_to 'Edit', edit_categoria_do_pagamento_path(categoria_do_pagamento) %></td>
+				<td><%= link_to 'Destroy', categoria_do_pagamento, :confirm => 'Are you sure?', :method => :delete %></td>
+			</tr>
+		<% end %>
+		</table>
 
-<div class="pagination right">
-
-</div>
-
-
-</div>
-
-<div class="bendl"></div>
-	<div class="bendr"></div>
+		<div class="pagination right">
+		</div>
 
 	</div>
 
-<% end %>
+	<div class="bendl"></div>
+	<div class="bendr"></div>	
 
+</div>
+
+<% end %> 	
