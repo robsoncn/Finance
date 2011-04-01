@@ -6,8 +6,8 @@ Feature: Manage categoria_do_pagamentos
       Scenario: Register new categoria_do_pagamentos
       	Given I am logged in user
         When I am on the categoria_do_pagamentos page
-        And I follow "New Categoria do Pagamento"
-       	And I fill in "categoria_do_pagamento_nome_da_categoria" with "Aluguel"
+        And I follow "Cadastrar"
+       	And I fill in "categoria_do_pagamento_Nome" with "Aluguel"
         And I fill in "categoria_do_pagamento_descricao_da_categoria" with "Teste do categoria descrição"
         And I press "Cadastrar"
 
@@ -17,15 +17,15 @@ Feature: Manage categoria_do_pagamentos
 		| Família          | Pagamento Familiar |
 		Given I am logged in user
 		When I am on the categoria_do_pagamentos page
-		And I follow "Edit"
-		And I fill in "categoria_do_pagamento_nome_da_categoria" with "Família"
+		And I press "Editar"
+		And I fill in "categoria_do_pagamento_nome" with "Família"
         And I fill in "categoria_do_pagamento_descricao_da_categoria" with "Pagamento família"
 		And I press "Cadastrar"
 
     Scenario: Register new categoria_do_pagamentos nome_da_categoria null
       	Given I am logged in user
         When I am on the categoria_do_pagamentos page
-        And I follow "New Categoria do Pagamento"
+        And I follow "Cadastrar"
        	And I fill in "categoria_do_pagamento_nome_da_categoria" with ""
         And I fill in "categoria_do_pagamento_descricao_da_categoria" with "Teste do categoria descrição"
         And I press "Cadastrar"
@@ -34,7 +34,7 @@ Feature: Manage categoria_do_pagamentos
 	Scenario: Register new categoria_do_pagamentos descricao_da_categoria null
       	Given I am logged in user
         When I am on the categoria_do_pagamentos page
-        And I follow "New Categoria do Pagamento"
+        And I follow "Cadastrar"
        	And I fill in "categoria_do_pagamento_nome_da_categoria" with "Empresa"
         And I fill in "categoria_do_pagamento_descricao_da_categoria" with ""
         And I press "Cadastrar"
@@ -46,7 +46,7 @@ Feature: Manage categoria_do_pagamentos
 		| Família   | pagamento Familiar |
 		Given I am logged in user
 		When I am on the categoria_do_pagamentos page
-		And I follow "Edit"
+		And I follow "Editar"
 		And I fill in "categoria_do_pagamento_nome_da_categoria" with "Família"
 		And I fill in "categoria_do_pagamento_descricao_da_categoria" with "Rec família"
 		And I press "Cadastrar"

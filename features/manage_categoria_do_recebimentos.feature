@@ -6,7 +6,7 @@ Feature: Manage categoria_do_recebimentos
   Scenario: Register new categoria_do_recebimentos
   	Given I am logged in user
     When I am on the categoria_do_recebimentos page
-    And I follow "New Categoria do recebimento"
+    And I follow "Cadastrar"
    	And I fill in "categoria_do_recebimento_nome_da_categoria" with "Empresa"
     And I fill in "categoria_do_recebimento_descricao_da_categoria" with "Teste do categoria descrição"
     And I press "Cadastrar"
@@ -15,7 +15,7 @@ Feature: Manage categoria_do_recebimentos
 	Scenario: Register new categoria_do_recebimentos nome_da_categoria null
   	Given I am logged in user
     When I am on the categoria_do_recebimentos page
-    And I follow "New Categoria do recebimento"
+    And I follow "Cadastrar"
    	And I fill in "categoria_do_recebimento_nome_da_categoria" with ""
     And I fill in "categoria_do_recebimento_descricao_da_categoria" with "Teste do categoria descrição"
     And I press "Cadastrar"
@@ -24,7 +24,7 @@ Feature: Manage categoria_do_recebimentos
 	Scenario: Register new categoria_do_recebimentos descricao_da_categoria null
   	Given I am logged in user
     When I am on the categoria_do_recebimentos page
-    And I follow "New Categoria do recebimento"
+    And I follow "Cadastrar"
    	And I fill in "categoria_do_recebimento_nome_da_categoria" with "Empresa"
     And I fill in "categoria_do_recebimento_descricao_da_categoria" with ""
     And I press "Cadastrar"
@@ -36,7 +36,7 @@ Feature: Manage categoria_do_recebimentos
 		| Família   | Recebimento Familiar |
 		Given I am logged in user
 		When I am on the categoria_do_recebimentos page
-		And I follow "Edit"
+		And I follow "Editar"
 		And I fill in "categoria_do_recebimento_nome_da_categoria" with "Família"
 		And I fill in "categoria_do_recebimento_descricao_da_categoria" with "Rec família"
 		And I press "Cadastrar"
@@ -45,7 +45,7 @@ Feature: Manage categoria_do_recebimentos
 	Scenario: Register new categoria_do_recebimentos nome_da_categoria null
   	Given I am logged in user
     When I am on the categoria_do_recebimentos page
-    And I follow "New Categoria do recebimento"
+    And I follow "Cadastrar"
    	And I fill in "categoria_do_recebimento_nome_da_categoria" with ""
     And I fill in "categoria_do_recebimento_descricao_da_categoria" with "Teste do categoria descrição"
     And I press "Cadastrar"
@@ -54,7 +54,7 @@ Feature: Manage categoria_do_recebimentos
 	Scenario: Register new categoria_do_recebimentos descricao_da_categoria null
   	Given I am logged in user
     When I am on the categoria_do_recebimentos page
-    And I follow "New Categoria do recebimento"
+    And I follow "Cadastrar"
    	And I fill in "categoria_do_recebimento_nome_da_categoria" with "Empresa"
     And I fill in "categoria_do_recebimento_descricao_da_categoria" with ""
     And I press "Cadastrar"
@@ -66,7 +66,7 @@ Feature: Manage categoria_do_recebimentos
 		| Família   | Recebimento Familiar |
 		Given I am logged in user
 		When I am on the categoria_do_recebimentos page
-		And I follow "Edit"
+		And I follow "Editar"
 		And I fill in "categoria_do_recebimento_nome_da_categoria" with "Família"
 		And I fill in "categoria_do_recebimento_descricao_da_categoria" with "Rec família"
 		And I press "Cadastrar"

@@ -1,6 +1,6 @@
-<% content_for :conteudo do %>
 
-<div class="block"> 
+
+<div class="block">
 
 	<div class="block_head">
 		<div class="bheadl"></div>
@@ -10,10 +10,18 @@
 		<%= link_to image_tag('icones/Add.png', :title => "Cadastrar"), new_recebimento_path %>
 		</div>
 	</div>
-    
-<div class="block_content">    
+
+<div class="block_content">
 	<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
-	
+<<<<<<< HEAD
+
+	<div class="tableactions" style="text-align: center">
+	<%= link_to image_tag('icones/Add.png', :title => "Cadastrar"), new_tipo_de_recebimento_path %>
+	</div>
+
+=======
+
+>>>>>>> d6436b18b8642db983bce50edbbb04b28c02c35d
 		<tr>
 			<th>Nome</th>
 			<th>Descrição</th>
@@ -23,14 +31,14 @@
 		<tr>
 		  <td><%= tipo_de_recebimento.nome_do_tipo %></td>
 		  <td><%= tipo_de_recebimento.descricao_do_tipo %></td>
-		  
-		  
+
+
 		<td><%= link_to image_tag('icones/Search.png', :title => "Visualizar"), tipo_de_recebimento %></td>
 		<td><%= link_to image_tag('icones/Modify.png', :title => "Editar"), edit_tipo_de_recebimento_path(tipo_de_recebimento) %></td>
 		<td><%= link_to image_tag('icones/Delete.png', :title => "Deletar"), tipo_de_recebimento, :confirm => 'Are you sure?', :method => :delete %></td>
-		
+
 		</tr>
-		
+
 	<% end %>
 	</table>
 
@@ -41,10 +49,7 @@
 </div>
 
 <div class="bendl"></div>
-	<div class="bendr"></div>	
-	
+	<div class="bendr"></div>
+
 	</div>
-
-<% end %> 
-
 
