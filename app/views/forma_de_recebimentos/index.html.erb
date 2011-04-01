@@ -1,19 +1,19 @@
 <% content_for :conteudo do %>
 
-<div class="block"> 
+<div class="block">
 
 	<div class="block_head">
 		<div class="bheadl"></div>
 		<div class="bheadr"></div>
 <h2>Lista de Formas de Recebimentos</h2>
  </div>
-    
-<div class="block_content">    
+
+<div class="block_content">
 
 <table cellpadding="0" cellspacing="0" width="100%" class="sortable">
 
 	<div class="tableactions" style="text-align: center">
-		<%= link_to image_tag('icones/Add.png', :title => "Cadastrar"), new_recebimento_path %>
+		<%= link_to image_tag('icones/Add.png', :title => "Cadastrar"), new_forma_de_recebimento_path %>
 	</div>
 
 	<tr>
@@ -25,7 +25,7 @@
   <tr>
     <td><%= forma_de_recebimento.nome_da_forma %></td>
     <td><%= forma_de_recebimento.descricao_da_forma %></td>
-    
+
 		<td><%= link_to image_tag('icones/Search.png', :title => "Visualizar"), forma_de_recebimento %></td>
 		<td><%= link_to image_tag('icones/Modify.png', :title => "Editar"), edit_forma_de_recebimento_path(forma_de_recebimento) %></td>
 		<td><%= link_to image_tag('icones/Delete.png', :title => "Deletar"), forma_de_recebimento, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -39,13 +39,13 @@
 
 </div>
 
-	
+
 </div>
 
 <div class="bendl"></div>
-	<div class="bendr"></div>	
-	
+	<div class="bendr"></div>
+
 	</div>
 
-<% end %> 
+<% end %>
 
