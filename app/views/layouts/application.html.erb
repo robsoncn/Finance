@@ -55,7 +55,7 @@
 				</li>
 				<li class="active"><a href="#">Relatórios</a> 
 				</ul>
-				<p class="user">Seja bem vindo, <a href="#"></a> | <%= link_to 'Logout', logout_path %></p>
+				<p class="user">Seja bem vindo, <% current_user.nome %><a href="#"></a> | <%= link_to 'Logout', logout_path %></p>
 
 				<% end %>
 
@@ -63,7 +63,7 @@
 				<!-- menu ends -->
 
 	<!-- forms begins -->
-	<%= yield :conteudo -%>
+	<%= yield  -%>
 	<!-- forms ends -->     
 	
 	
