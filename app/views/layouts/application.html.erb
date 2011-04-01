@@ -9,19 +9,19 @@
 <%= stylesheet_link_tag 'style', 'facebox', 'visualize', 'date_input' %>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	
-	
+
+
 <title>EQUILIBRIUM</title>
-   	
+
 </head>
 
 <body>
 
-<div id="hld"> <!-- hld begins --> 
-	
+<div id="hld"> <!-- hld begins -->
 
-	<div class="wrapper"> <!-- wrapper begins --> 
-	
+
+	<div class="wrapper"> <!-- wrapper begins -->
+
 		<div id="header">
 
 				<!-- menu begins -->
@@ -32,10 +32,10 @@
 				<h1><a href="#">Equilibrium</a></h1>
 
 				<% if logged_in? -%>
-				<ul id="nav"> 
-					<li><%= link_to 'Perfil', profile_path  %></li> 
-					<li class="active"><a href="#">Recebimentos</a> 
-				<ul> 
+				<ul id="nav">
+					<li><%= link_to 'Perfil', profile_path  %></li>
+					<li class="active"><a href="#">Recebimentos</a>
+				<ul>
 					<li><%= link_to 'Resumo', recebimentos_path  %></li>
 					<li><%= link_to 'Novo Recebimento', new_recebimento_path  %></li>
 					<li><%= link_to 'Cadastrar Tipo', tipo_de_recebimentos_path  %></li>
@@ -44,7 +44,7 @@
 				</ul>
 				</li>
 
-				<li class="active"><a href="#">Pagamentos</a> 
+				<li class="active"><a href="#">Pagamentos</a>
 				<ul>
 					<li><%= link_to 'Resumo', pagamentos_path  %></li>
 					<li><%= link_to 'Novo Pagamento', new_pagamento_path  %></li>
@@ -53,20 +53,20 @@
 					<li><%= link_to 'Cadastrar Categoria', categoria_do_pagamentos_path  %></li>
 				</ul>
 				</li>
-				<li class="active"><a href="#">Relatórios</a> 
+				<li class="active"><a href="#">Relatórios</a>
 				</ul>
 				<p class="user">Seja bem vindo, <a href="#"></a> | <%= link_to 'Logout', logout_path %></p>
 
 				<% end %>
 
-				</div>	
+				</div>
 				<!-- menu ends -->
 
 	<!-- forms begins -->
-	<%= yield :conteudo -%>
-	<!-- forms ends -->     
-	
-	
+	<%= yield  -%>
+	<!-- forms ends -->
+
+
 	</div> 	<!-- wrapper ends -->
 
 </div>		<!-- #hld ends -->
@@ -74,3 +74,4 @@
 
 </body>
 </html>
+

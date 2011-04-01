@@ -1,4 +1,4 @@
-<% content_for :conteudo do %>
+
 
 <div class="block">
 
@@ -7,7 +7,7 @@
 		<div class="bheadr"></div>
 	<h2>Lista de Formas de Recebimentos</h2>
 		<div class="tableactions" style="text-align: center">
-		<%= link_to image_tag('icones/Add.png', :title => "Cadastrar"), new_recebimento_path %>
+		<%= link_to image_tag('icones/Add.png', :title => "Cadastrar"), new_forma_de_recebimento_path %>
 		</div>
  </div>
 
@@ -15,13 +15,6 @@
 
 <table cellpadding="0" cellspacing="0" width="100%" class="sortable">
 
-<<<<<<< HEAD
-	<div class="tableactions" style="text-align: center">
-		<%= link_to image_tag('icones/Add.png', :title => "Cadastrar"), new_forma_de_recebimento_path %>
-	</div>
-
-=======
->>>>>>> d6436b18b8642db983bce50edbbb04b28c02c35d
 	<tr>
 		<th>Nome</th>
 		<th>Descrição</th>
@@ -52,6 +45,4 @@
 	<div class="bendr"></div>
 
 	</div>
-
-<% end %>
 

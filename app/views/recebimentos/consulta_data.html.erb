@@ -1,16 +1,15 @@
-<% content_for :conteudo do %>
 
-<div class="block"> 
+<div class="block">
 
 	<div class="block_head">
 		<div class="bheadl"></div>
 		<div class="bheadr"></div>
 	<h2>Lista de Contas Recebidas</h2>
-	</div>	
-	
+	</div>
+
 <div class="block_content">
 	<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
-	
+
 	<div class="tableactions">
 <%= link_to 'Cadastrar Recebimento', new_recebimento_path %>
 </div>
@@ -22,12 +21,12 @@
 		<th>Tipo</th>
 		<th>Forma</th>
 		<th>Categoria</th>
-	   
+
 	  </tr>
 
 	<% @recebimentos.each do |recebimento| %>
 	  <tr>
-	  <td width="30px"><input type="checkbox" /></td> 
+	  <td width="30px"><input type="checkbox" /></td>
 		<td><%= l recebimento.data_recebimento %></td>
 		<td><%= recebimento.valor_recebimento %></td>
 		<td><%= recebimento.tipo_de_recebimento.nome_do_tipo %></td>
@@ -37,13 +36,13 @@
 		<td><%= link_to 'Editar', edit_recebimento_path(recebimento) %></td>
 		<td><%= link_to 'Deletar', recebimento, :confirm => 'Are you sure?', :method => :delete %></td>
 	  </tr>
-	  
+
 	<% end %>
 
 		<tr>
-			<td colspan="2"><b>Valor Acumulado</b></td>  
+			<td colspan="2"><b>Valor Acumulado</b></td>
 			<% @total = Recebimento.sum (:valor_recebimento) %>
-			<td align='right'><b>   <%=h @total %> </b></td>  
+			<td align='right'><b>   <%=h @total %> </b></td>
 		</tr>
 </table>
 
@@ -52,15 +51,11 @@
 <div class="pagination right">
 </div>
 
-	
+
 </div>
 
 <div class="bendl"></div>
-<div class="bendr"></div>	
-	
+<div class="bendr"></div>
+
 </div>
-
-
-<% end %> 
-
 

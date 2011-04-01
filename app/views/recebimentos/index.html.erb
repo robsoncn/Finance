@@ -1,4 +1,4 @@
-<% content_for :conteudo do %>
+
 
 <div class="block">
 
@@ -9,12 +9,12 @@
 		<div class="tableactions" style="text-align: center">
 <%= link_to image_tag('icones/Add.png', :title => "Cadastrar"), new_recebimento_path %>
 	</div>
-	
+
 	</div>
 
 <div class="block_content">
 	<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
-	
+
 
 
 	  <tr>
@@ -29,13 +29,13 @@
 
 	<% @recebimentos.each do |recebimento| %>
 	  <tr>
-	  <td width="30px"><input type="checkbox" /></td> 
+	  <td width="30px"><input type="checkbox" /></td>
 		<td><%= l recebimento.data_recebimento %></td>
 		<td><%= recebimento.valor_recebimento %></td>
 		<td><%= recebimento.tipo_de_recebimento.nome_do_tipo %></td>
 		<td><%= recebimento.forma_de_recebimento.nome_da_forma %></td>
 		<td><%= recebimento.categoria_do_recebimento.nome_da_categoria %></td>
-		
+
 
 		<td><%= link_to image_tag('icones/Search.png', :title => "Visualizar"), recebimento %></td>
 		<td><%= link_to image_tag('icones/Modify.png', :title => "Editar"), edit_recebimento_path(recebimento) %></td>
@@ -46,9 +46,9 @@
 	<% end %>
 
 		<tr>
-			<td colspan="2"><b>Valor Acumulado</b></td>  
+			<td colspan="2"><b>Valor Acumulado</b></td>
 			<% @total = Recebimento.sum (:valor_recebimento) %>
-			<td align='right'><b>   <%=h @total %> </b></td>  
+			<td align='right'><b>   <%=h @total %> </b></td>
 			</tr>
 </table>
 
@@ -65,8 +65,4 @@
 	<div class="bendr"></div>
 
 	</div>
-
-
-
-<% end %>
 

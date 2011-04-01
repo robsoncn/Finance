@@ -1,31 +1,31 @@
-<% content_for :conteudo do %>
 
-<div class="block"> 
+
+<div class="block">
 
 	<div class="block_head">
 			<div class="bheadl"></div>
 			<div class="bheadr"></div>
 			<h2>Resumo do Recebimento</h2>
-	</div>	
-	
+	</div>
+
 	<div class="block_content">
-	
-		<%= render :partial => '/shared/messages' %> 
+
+		<%= render :partial => '/shared/messages' %>
 		<p id="notice">
-	
+
 		<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
 			<tr>
 				<th>Nome</th>
 				<th>Descrição</th>
-			</tr>	
-			
+			</tr>
+
 			<tr>
 				<td><%= @forma_de_recebimento.nome_da_forma %></td>
 				<td><%= @forma_de_recebimento.descricao_da_forma %></td>
-			</tr>	
-			
-	</table>		
-			
+			</tr>
+
+	</table>
+
 	<div class="tableactions">
 		<%= link_to 'Edit', edit_forma_de_recebimento_path(@forma_de_recebimento) %> |
 		<%= link_to 'Back', forma_de_recebimentos_path %>
@@ -38,11 +38,7 @@
 	</div>
 
 		<div class="bendl"></div>
-		<div class="bendr"></div>	
-	
-</div>
+		<div class="bendr"></div>
 
-<% end %> 
-			
-				
+</div>
 
