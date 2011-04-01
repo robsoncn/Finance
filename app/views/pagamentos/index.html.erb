@@ -6,14 +6,15 @@
 		<div class="bheadl"></div>
 		<div class="bheadr"></div>
 		<h2>Lista de Contas a Pagar</h2>
+		<div class="tableactions" style="text-align: center">
+		<%= link_to image_tag('icones/Add.png', :title => "Cadastrar"), new_pagamento_path %>
+		</div>
 		 </div>
 
 <div class="block_content">
 <table cellpadding="0" cellspacing="0" width="100%" class="sortable">
 
-	<div class="tableactions" style="text-align: center">
-	<%= link_to image_tag('icones/Add.png', :title => "Cadastrar"), new_pagamento_path %>
-	</div>
+	
 
   <tr>
  		<th></th>
@@ -26,7 +27,6 @@
   </tr>
 
 <% @pagamentos.each do |pagamento| %>
-  <tbody>
   <tr>
   	<td width="30px"><input type="checkbox" /></td> 
     <td><%= pagamento.data_do_pagamento %></td>
@@ -35,8 +35,7 @@
     <td><%= pagamento.tipo_do_pagamento.nome_do_tipo %></td>
     <td><%= pagamento.metodo_de_pagamento.nome_do_metodo %></td>
     <td><%= pagamento.categoria_do_pagamento.nome_da_categoria %></td>
-    </tbody>
-   		<td><%= link_to image_tag('icones/Search.png', :title => "Visualizar"), pagamento %></td>
+   	<td><%= link_to image_tag('icones/Search.png', :title => "Visualizar"), pagamento %></td>
 		<td><%= link_to image_tag('icones/Modify.png', :title => "Editar"), edit_pagamento_path(pagamento) %></td>
 		<td><%= link_to image_tag('icones/Delete.png', :title => "Deletar"), pagamento, :confirm => 'Are you sure?', :method => :delete %></td>
 		

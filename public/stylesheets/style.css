@@ -467,7 +467,8 @@ a:hover {
 .block .tableactions {
 	overflow: hidden;
 	padding-bottom: 20px;
-	float: left;
+	float:right;
+	margin-top:10px;
 	}
 
 .block .tableactions select {
